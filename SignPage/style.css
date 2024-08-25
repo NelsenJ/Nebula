@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------------------*\
+  #Custom Property
+\*-----------------------------------*/
+
+:root{
+    --primary-color: #FCFFFF;
+    --pink-med: #FFC1CF;
+    --on-primary-font: #78D1CC;
+    --lightgreen: #B4DADB;
+    --on-pink-med-font: #FFFFFF;
+    --hover-choose-profile: #728AAC;
+}
+
+
+/*-----------------------------------*\
+  #Font
+\*-----------------------------------*/
+
+:root{
+    --opensans: "Open Sans", sans-serif;
+}
+
+
+/*-----------------------------------*\
+  #Color
+\*-----------------------------------*/
