@@ -10,7 +10,7 @@
 
 :root{
     --primary-color: #FCFFFF;
-    --pink-med: #FFC1CF;
+    --pink-med: #FF9BB1;
     --on-primary-font: #78D1CC;
     --lightgreen: #B4DADB;
     --on-pink-med-font: #FFFFFF;
@@ -40,11 +40,11 @@ body{
 
 .top{
   height: 45vh;
-  width: 100%;
-  background-image: url(./assets/Sign\ up.png);
+
+  background-image: url(./assets/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -10px;
+  background-position-x: right;
 }
 
 .container{
@@ -68,7 +68,9 @@ body{
 }
 
 .container .inputbox{
-  padding: 15px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   border-radius: 20px;
   background-color: var(--pink-med);
   height: fit-content;
@@ -90,6 +92,7 @@ body{
   outline: none;
   background: transparent;
   font-size: 20px;
+  font-weight: bold;
   color: #fff;
 }
 
@@ -210,7 +213,7 @@ body{
   font-size: 20px;
   font-weight: bold;
   font-family: var(--poppins);
-  transform: translateY(13px);
+  transform: translateY(20px);
   transition: 0.2s ease;
 }
 
