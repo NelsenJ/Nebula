@@ -127,6 +127,7 @@ header {
     z-index: 98;
     padding-top: 90px;
     transition: 0.4s;
+    overflow-y: scroll;
   }
   .mobile-nav.is-active {
     left: 0;
@@ -136,16 +137,21 @@ header {
     margin-top: 10px;
   }
   .mobile-nav a {
-    display: block;
+    display: flex;
     width: 100%;
     max-width: 300px;
     margin: 0;
     border-radius: 20px;
-    text-align: center;
+    /* text-align: center; */
+    align-items: center;
     padding: 20px 16px;
     /* background-color: #a179e0; */
     color: #000;
     text-decoration: none;
+  }
+  .mobile-nav i {
+    font-size: 23px;
+    padding-right: 10px;
   }
   .mobile-nav a:nth-child(2) {
     background-color: #a0bee1;
