@@ -75,12 +75,14 @@ header {
 @media screen and (max-width: 1200px) {
   header {
     padding: 0 30px;
+    position: fixed;
   }
   /* .nav-bar ul li a {
     font-size: 16px;
   } */
 }
 @media screen and (max-width: 1150px) {
+
   .nav-bar {
     display: none;
   }
