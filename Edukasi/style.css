@@ -2,7 +2,7 @@ body {
   background-color: #fff;
 }
 
-.head{
+.head {
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -23,13 +23,13 @@ body {
   margin: 0;
 }
 
-.tips-box1{
+.tips-box1 {
   margin: 20px 18%;
   display: flex;
   flex-direction: column;
 }
 
-.box{
+.box {
   display: grid;
   grid-template-columns: auto auto;
   gap: 3px;
@@ -75,14 +75,14 @@ body {
   background-color: #9ce6fe;
 }
 
-.tips-box{
+.tips-box {
   margin: 20px 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.container{
+.container {
   background-color: salmon;
   width: 180px;
   height: fit-content;
@@ -104,10 +104,13 @@ body {
   margin-top: 15px;
 }
 
-.row1, .row2, .row3 {
- display: flex;
- flex-direction: row;
- justify-content: space-evenly;
+.row1,
+.row2,
+.row3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
 }
 
 .box1 {
@@ -149,7 +152,7 @@ body {
 }
 
 @media screen and (max-width: 750px) {
-  .container{
+  .container {
     width: 150px;
   }
   .container p {
@@ -158,7 +161,7 @@ body {
   .container img {
     width: 120px;
   }
-  .head h1{
+  .head h1 {
     font-size: 25px;
   }
 
@@ -171,12 +174,12 @@ body {
   .box p {
     font-size: 13px;
   }
-  .tips-box1{
+  .tips-box1 {
     margin: 20px 16%;
   }
 }
 @media screen and (max-width: 440px) {
-  .container{
+  .container {
     width: 150px;
   }
   .container p {
@@ -185,7 +188,7 @@ body {
   .container img {
     width: 120px;
   }
-  .head h1{
+  .head h1 {
     font-size: 25px;
   }
 
@@ -198,19 +201,19 @@ body {
   .box p {
     font-size: 12px;
   }
-  .tips-box1{
+  .tips-box1 {
     margin: 20px 8%;
   }
 
   .container {
     width: 130px;
   }
-  .container img{
+  .container img {
     width: 90px;
   }
 }
 @media screen and (max-width: 350px) {
-  .container{
+  .container {
     width: 130px;
   }
   .container p {
@@ -219,7 +222,7 @@ body {
   .container img {
     width: 100px;
   }
-  .head h1{
+  .head h1 {
     font-size: 25px;
   }
 
@@ -232,14 +235,14 @@ body {
   .box p {
     font-size: 10px;
   }
-  .tips-box1{
+  .tips-box1 {
     margin: 20px 8%;
   }
-  
+
   .container {
     width: 120px;
   }
-  .container img{
+  .container img {
     width: 80px;
   }
 }
