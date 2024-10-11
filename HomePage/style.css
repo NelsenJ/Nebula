@@ -50,19 +50,23 @@ header {
 .nav-bar {
   display: flex;
   flex-direction: row;
+
+  height: 100%;
 }
 .nav-bar a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #000;
   background-color: #ffc1cf;
   font-size: 16px;
   padding: 12px;
-  border-radius: 50px;
+  height: 100%;
   transition: 0.2s;
   margin: 0 5px;
 }
 .nav-bar a:hover {
-  text-decoration: underline;
+  background-color: #ff9bb1;
 }
 .hamburger {
   display: none;
@@ -82,7 +86,6 @@ header {
   } */
 }
 @media screen and (max-width: 1150px) {
-
   .nav-bar {
     display: none;
   }
@@ -118,18 +121,18 @@ header {
     opacity: 0;
   }
   .mobile-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 100%;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 98;
     padding-top: 90px;
     transition: 0.4s;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-bottom: 30px;
   }
   .mobile-nav.is-active {
