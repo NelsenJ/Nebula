@@ -38,14 +38,18 @@
     height: 100svh;
   }
   
-  
+  div.body{
+    display: flex;
+    flex-direction: row;
+  }
   
   .top{
-    height: 45vh;
+    height: 100vh;
+    width: 50vw;
     background-image: url(./assets/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: right;
+    background-position-x: 50%;
   }
   
   .container{
@@ -239,7 +243,7 @@
     background-image: url(./assets/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: right;
+    background-position-x: 70%;
   }
   
   .container{
@@ -271,6 +275,8 @@
     height: fit-content;
     position: relative;
     transform: translateY(-30px);
+    margin-left: 20px;
+    margin-right: 20px;
   }
   
   .container .inputbox label,
@@ -289,6 +295,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #fff;
+    width: 75%;
   }
   
   .container h1{
@@ -408,11 +415,61 @@
     font-size: 20px;
     font-weight: bold;
     font-family: var(--poppins);
-    transform: translateY(20px);
+    transform: translateY(10px);
     transition: 0.2s ease;
   }
   
   .container button:hover{
     background-color: var(--hover-buton);
   }
+}
+
+@media(max-width: 400px){
+  .container h1{
+    color: var(--on-primary-font);
+    font-family: var(--poppins);
+    font-size: 27px;
+    transform: translateY(-25px);
+  }
+  .container .inputbox input,
+  .container .inputbox input:focus{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    width: 70%;
+  }
+}
+
+@media(max-width: 350px){
+  .container h1{
+    color: var(--on-primary-font);
+    font-family: var(--poppins);
+    font-size: 25px;
+    transform: translateY(-25px);
+  }
+  .container .inputbox input,
+  .container .inputbox input:focus{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) and (min-height: 700px) {
+  .container{
+    height: 55vh;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
 }
