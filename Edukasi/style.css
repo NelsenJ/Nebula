@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   /* background-color: saddlebrown; */
+  margin-bottom: 20px;
 }
 
 .head h1 {
@@ -16,7 +17,7 @@ body {
   margin-top: 8px;
   color: #ea444e;
   text-align: center;
-  max-width: fit-content;
+  /* max-width: fit-content; */
 }
 
 .head p {
@@ -35,13 +36,15 @@ body {
   gap: 3px;
   height: fit-content;
   margin-bottom: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
+
 
 .box h1 {
   font-size: 70px;
   margin: 15px;
   font-weight: 100;
+  margin-right: 25px;
 }
 
 .box h3 {
