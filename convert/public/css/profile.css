@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------------------*\
+  #Color
+\*-----------------------------------*/
+
+:root{
+  --primary-color: #FCFFFF;
+  --button: #F9CA9E;
+  --button-arrowc: #fff;
+  --input: #FF9BB1;
+  --label: #78D1CC;
+  --font: #fff;
+  --delete: #ED451D;
+  --changename: #919191;
+  --input-checkbox: #FFC8DD;
+  --border: #000;
+  --checked:#78D1CC;
+}
+
+
+/*-----------------------------------*\
+  #Font
+\*-----------------------------------*/
+
+
+
+:root{
+    --opensans: "Open Sans", sans-serif;
+    --poppins: "Poppins", sans-serif;
+}
+
+/*-----------------------------------*\
+  #Css
+\*-----------------------------------*/
+
+div.containerall{
+    padding: 30px;
+}
+
+div.button{
+  position: absolute;
+}
+
+div.button button{
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--button);
+  padding: 10px;
+  color: var(--button-arrowc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.arrow-left {
+  background-image: url(../images/profile/arrow.png);
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  background-position-x: -1px;
+}
+
+
+div.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  padding-top: 20px;
+
+  gap: 20px;
+}
+
+div.container .avatar{
+  width: 120px;
+  height: 120px;
+  background-color: black;
+  border-radius: 50%;
+  transition: 0.1s ease;
+  background-image: url(../images/profile/female.png);
+  background-size: 125% 125%;
+  background-position: center;
+}
+
+div.container p#change-name{
+  font-family: var(--poppins);
+  color: var(--changename);
+  font-size: 21px;
+  font-weight: bold;
+}
+
+div.input{
+  width: 100%;
+  height: fit-content;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--input);
+  color: var(--font);
+  font-family: var(--poppins);
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+div.input input{
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 18px;
+  color: var(--font);
+  font-family: var(--poppins);
+}
+
+div.input.date input span{
+  color: var(--font);
+}
+
+div.input.gender{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+div.input div.option{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+
+}
+
+div.input div.option div.choose{
+  background-color: var(--input-checkbox);
+  border-radius: 20px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: normal;
+  font-size: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+}
+
+div.gender div.option div.choose input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 47%;
+  background-color: var(--primary-color);
+  border: 0.1px solid var(--border);
+  cursor: pointer;
+  transition: 0.05s ease;
+}
+
+div.gender div.option div.choose input[type="checkbox"]:checked{
+  background-color: var(--checked);
+}
+
+
+div.input.name input{
+  width: 73%;
+}
+
+div.input.date input{
+  width: 100%
+}
+
+div.measure{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+div.isi{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+div.measure p{
+  font-family: var(--poppins);
+  color: var(--label);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div.isi div.inputbox{
+  background-color: var(--input);
+  border-radius: 15px;
+  color: var(--font);
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 110px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: var(--poppins);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+div.isi input{
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--font);
+  font-family: var(--poppins);
+  width: 52%;
+  overflow: visible;
+}
+
+div.delete{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+div.delete button{
+  border: none;
+  outline: none;
+  background-color: var(--delete);
+  padding: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  border-radius: 19px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  color: var(--font);
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+div.delete button i{
+  font-size: 20px;
+  font-weight: normal;
+}
