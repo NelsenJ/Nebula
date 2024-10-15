@@ -17,45 +17,49 @@
     <div class="body">
         <div class="top">
         </div>
-        <div class="container">
-            <div class="inputbox">
-                <label for="User">Nama</label>
-                <span>:</span>
-                <input id="User" type="username" placeholder="">
-            </div>
-            <h1>Pilih Karakter Profilemu</h1>
-            <div class="profile">
-                <div class="girl">
-    
+        <form action="/" method="POST">
+            <div class="container">
+                <div class="inputbox">
+                    <label for="User">Nama</label>
+                    <span>:</span>
+                    <input id="User" name="name" type="text" placeholder="">
                 </div>
-                <div class="man">
-    
-                </div>
-            </div>
-            <div class="info">
-                <div class="height">
-                    <div class="cover">
-                        <p>Tinggi Badan</p>
+                <h1>Pilih Karakter Profilemu</h1>
+                <div class="profile">
+                    <div class="girl">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
                     </div>
-                    <div class="FormH">
-                        <input id="height" type="number">
-                        <label for="height">cm</label>
+                    <div class="man">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
                     </div>
                 </div>
-                <div class="weight">
-                    <div class="cover">
-                        <p>Berat Badan</p>
+                <div class="info">
+                    <div class="height">
+                        <div class="cover">
+                            <p>Tinggi Badan</p>
+                        </div>
+                        <div class="FormH">
+                            <input id="height" name="height" type="number">
+                            <label for="height">cm</label>
+                        </div>
                     </div>
-                    <div class="FormW">
-                        <input id="weight" type="number" >
-                        <label for="weight">kg</label>
+                    <div class="weight">
+                        <div class="cover">
+                            <p>Berat Badan</p>
+                        </div>
+                        <div class="FormW">
+                            <input id="weight" name="weight" type="number">
+                            <label for="weight">kg</label>
+                        </div>
                     </div>
                 </div>
+                <div class="submit">
+                    <button type="submit">Submit</button>
+                </div>
             </div>
-            <div class="submit">
-                <button>Submit</button>
-            </div>
-        </div>
+        </form>        
     </div>
 </body>
 <script src="node.js"></script>

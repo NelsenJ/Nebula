@@ -12,9 +12,9 @@ router.get('/profile', (req, res) => {
   res.render('profile'); // Will render views/profile.ejs
 });
 
-// Sign-in Page Route
+// Sign-in Page Route (GET)
 router.get('/sign', (req, res) => {
-  res.render('sign'); // Will render views/signin.ejs
+  res.render('sign'); // Will render views/sign.ejs
 });
 
 // Education Page Route
@@ -22,24 +22,35 @@ router.get('/education', (req, res) => {
   res.render('education'); // Will render views/education.ejs
 });
 
-// Education Page Route
+// Introduction Page Route
 router.get('/introduction', (req, res) => {
-  res.render('introduction'); // Will render views/education.ejs
+  res.render('introduction'); // Will render views/introduction.ejs
 });
 
-// Example POST route to add a user to MongoDB (you can update as needed)
-router.post('/addUser', async (req, res) => {
+// POST Route for sign-in page to add a user to MongoDB
+router.post('/sign', async (req, res) => {
+  // Collect form data from the sign.ejs form
+  const { name, gender, height, weight } = req.body;
+
+  // Create a new User instance using the form data
   const newUser = new User({
-    name: req.body.name,
-    age: req.body.age,
-    email: req.body.email,
+    name: name,
+    gender: gender,
+    height: height,
+    weight: weight
   });
 
   try {
-    const savedUser = await newUser.save();
-    res.json(savedUser);
+    // Save the new user to MongoDB
+    await newUser.save();
+    console.log('User saved:', newUser);
+
+    // Redirect to profile or home page (you can change this)
+    res.redirect('/profile'); // Redirect after success
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    // Handle any errors that occur while saving
+    console.error('Error saving user:', err);
+    res.status(500).send('Internal Server Error');
   }
 });
 
