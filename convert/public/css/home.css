@@ -1,42 +1,95 @@
 .header {
-    background-color: #a0bee1;
-    margin: 20px 5%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 8px;
-  }
-  .header h1{
-    color: white;
-  }
-  .header button{
-    background-color: #5b90cf;
-    border: 1px solid #d3e8ff;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 40px;
-    color: #d3e8ff;
-  }
-  .header img{
-    margin-top: 20px;
-    width: 35px;
-  }
-  
-  .box {
-    width: 30%;
-    height: fit-content;
-  }
-  .box1 {
-    background-color: #ff9bb1;
-  }
-  .box2 {
-    background-color: #6ac4e5;
-  }
-  .box3 {
-    background-color: #f1a161;
-  }
-  .box4 {
-    background-color: #728aac;
-  }
+  background-color: #a0bee1;
+  margin: 20px 5%;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8px;
+}
+.header h1{
+  margin: 20px 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.header button{
+  background-color: #5b90cf;
+  border: 2px solid #d3e8ff;
+  border-radius: 30px;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px 40px;
+  color: #d3e8ff;
+  font-family: 'Poppins', sans-serif;
+}
+.header img{
+  margin-top: 20px;
+  width: 35px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 40px;
+  font-family: "Canva Sans", sans-serif;
+}
+
+.title p {
+  margin: 5px 0;
+  font-size: 20px;
+  font-family: "Canva Sans", sans-serif;
+}
+
+.container{
+  display: grid;
+  width: 88%;
+  height: fit-content;
+  grid-template-columns: auto auto;
+  /* background-color: black; */
+  margin: 30px 5px;
+  gap: 10% 7%;
+  align-items: center;
+}
+
+.box {
+  width: 100%;
+  height: 150px;
+  padding: 4%;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;  
+}
+.box p {
+  font-family: "Poppins", sans-serif;;
+  color: white;
+  font-size: 25px;
+  /* margin: 20px 0; */
+}
+.box img {
+  width: 70%;
+  height: 100%;
+}
+.box1 {
+  background-color: #ff9bb1;
+}
+.box2 {
+  background-color: #6ac4e5;
+}
+.box3 {
+  background-color: #f1a161;
+}
+.box4 {
+  background-color: #728aac;
+}
+
