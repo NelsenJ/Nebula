@@ -187,6 +187,10 @@ div.body{
   transition: 0.1s ease;
 }
 
+.container .girl.girl:has(input[type="radio"]){
+  transition: 0.1s ease;
+}
+
 
 
 
@@ -470,6 +474,25 @@ body{
 .container div.man:active{
   outline: 7px solid var(--hover-choose-profile);
 }
+
+.container input[type="radio"]{
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  transition: 0.1s ease;
+}
+
+.container .girl:has(input[type="radio"]:checked),
+.container .man:has(input[type="radio"]:checked){
+  outline: 7px solid var(--hover-choose-profile);
+  transition: 0.1s ease;
+}
+
+.container .girl.girl:has(input[type="radio"]){
+  transition: 0.1s ease;
+}
+
+
 
 .container .info{
   margin-top: 20px;
