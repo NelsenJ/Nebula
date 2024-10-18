@@ -27,9 +27,11 @@ router.get('/introduction', (req, res) => {
   res.render('introduction'); // Will render views/introduction.ejs
 });
 
-router.get('/health-status', (req, res) => {
-  res.render('statusKesehatan'); // Will render views/statusKesehatan.ejs
-});
+//health-stats
+router.get('/health-status', (req, res) =>{
+  res.render('health-status'); // Will render views/health-status.ejs
+})
+
 
 // POST Route for sign-in page to add a user to MongoDB
 router.post('/sign', async (req, res) => {
@@ -50,7 +52,7 @@ router.post('/sign', async (req, res) => {
     console.log('User saved:', newUser);
 
     // Redirect to profile or home page (you can change this)
-    res.redirect('/profile'); // Redirect after success
+    res.redirect('/'); // Redirect after success
   } catch (err) {
     // Handle any errors that occur while saving
     console.error('Error saving user:', err);
