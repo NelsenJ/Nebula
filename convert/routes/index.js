@@ -2,43 +2,45 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel');
 
-// Home Page Route
+//first
 router.get('/', (req, res) => {
-  res.render('home'); // Will render views/home.ejs (you will create this page)
+  res.render('sign');
 });
 
-// Profile Page Route
+
+//profile
 router.get('/profile', (req, res) => {
-  res.render('profile'); // Will render views/profile.ejs
+  res.render('profile');
 });
 
-// Sign-in Page Route (GET)
-router.get('/sign', (req, res) => {
-  res.render('sign'); // Will render views/sign.ejs
+//home
+router.get('/home', (req, res) => {
+  res.render('home');
 });
 
-// Education Page Route
+//edukasi
 router.get('/education', (req, res) => {
-  res.render('education'); // Will render views/education.ejs
+  res.render('education');
 });
 
-// Introduction Page Route
+//Intro
 router.get('/introduction', (req, res) => {
-  res.render('introduction'); // Will render views/introduction.ejs
+  res.render('introduction');
 });
 
 //health-stats
-router.get('/health-status', (req, res) =>{
-  res.render('health-status'); // Will render views/health-status.ejs
+router.get('/health-stats', (req, res) =>{
+  res.render('health-status');
 })
 
+//calc
+router.get('/calc', (req, res) =>{
+  res.render('calc');
+})
 
-// POST Route for sign-in page to add a user to MongoDB
 router.post('/sign', async (req, res) => {
-  // Collect form data from the sign.ejs form
   const { name, gender, height, weight } = req.body;
 
-  // Create a new User instance using the form data
   const newUser = new User({
     name: name,
     gender: gender,
@@ -47,12 +49,10 @@ router.post('/sign', async (req, res) => {
   });
 
   try {
-    // Save the new user to MongoDB
     await newUser.save();
     console.log('User saved:', newUser);
 
-    // Redirect to profile or home page (you can change this)
-    res.redirect('/'); // Redirect after success
+    res.redirect('/home');
   } catch (err) {
     // Handle any errors that occur while saving
     console.error('Error saving user:', err);
