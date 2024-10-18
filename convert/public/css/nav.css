@@ -180,4 +180,7 @@ header {
   .mobile-nav a:nth-child(9) {
     background-color: #343434;
   }
+  div.head {
+    padding-top: 100px;
+  }
 }
