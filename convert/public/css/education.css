@@ -102,34 +102,38 @@ body {
 
 .container {
   background-color: salmon;
-  width: 180px;
-  height: fit-content;
-  padding: 5px;
+  width: 220px;
+  height: 220px;
+  padding: 15px;
   display: flex;
   margin: 8px 0;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
   border-radius: 15px;
 }
 
 .container p {
   font-size: 18px;
   font-weight: bolder;
+  text-transform: capitalize;
+  margin-bottom: 15px;
 }
 
 .container img {
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
-.row1,
+/* .row1,
 .row2,
 .row3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 50px;
-}
+} */
 
 .box1 {
   background-color: #ffb3c4;
@@ -174,8 +178,12 @@ body {
 }
 
 @media screen and (max-width: 750px) {
+  .tips-box {
+    gap: 10px;
+  }
   .container {
-    width: 150px;
+    width: 200px;
+    height: 200px;
   }
   .container p {
     font-size: 15px;
@@ -200,20 +208,21 @@ body {
     margin: 20px 16%;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 480px) {
+  .tips-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .container {
-    width: 150px;
+    width: 180px;
+    height: 180px;
   }
   .container p {
-    font-size: 14px;
-  }
-  .container img {
-    width: 120px;
+    font-size: 13px;
   }
   .head h1 {
     font-size: 25px;
   }
-
   .box h1 {
     font-size: 68px;
   }
@@ -226,23 +235,37 @@ body {
   .tips-box1 {
     margin: 20px 8%;
   }
-
-  .container {
-    width: 130px;
-  }
   .container img {
     width: 90px;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   .container {
-    width: 130px;
-  }
-  .container p {
-    font-size: 13px;
+    width: 150px;
+    height: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .container img {
-    width: 100px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .container p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .container {
+    width: 120px;
+    height: 120px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .container p {
+    font-size: 10px;
+  }
+  .container img {
+    width: 70px;
   }
   .head h1 {
     font-size: 25px;
@@ -259,12 +282,5 @@ body {
   }
   .tips-box1 {
     margin: 20px 8%;
-  }
-
-  .container {
-    width: 120px;
-  }
-  .container img {
-    width: 80px;
   }
 }
