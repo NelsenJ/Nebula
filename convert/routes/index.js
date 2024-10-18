@@ -27,6 +27,10 @@ router.get('/introduction', (req, res) => {
   res.render('introduction'); // Will render views/introduction.ejs
 });
 
+router.get('/health-status', (req, res) => {
+  res.render('statusKesehatan'); // Will render views/statusKesehatan.ejs
+});
+
 // POST Route for sign-in page to add a user to MongoDB
 router.post('/sign', async (req, res) => {
   // Collect form data from the sign.ejs form
