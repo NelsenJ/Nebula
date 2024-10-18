@@ -208,7 +208,7 @@ body {
     margin: 20px 16%;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 480px) {
   .tips-box {
     padding-left: 15px;
     padding-right: 15px;
@@ -219,9 +219,6 @@ body {
   }
   .container p {
     font-size: 13px;
-  }
-  .container img {
-    width: 120px;
   }
   .head h1 {
     font-size: 25px;
@@ -238,24 +235,37 @@ body {
   .tips-box1 {
     margin: 20px 8%;
   }
-
-  .container {
-    width: 130px;
-  }
   .container img {
     width: 90px;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   .container {
-    width: 180px;
-    height: 180px;
-  }
-  .container p {
-    font-size: 13px;
+    width: 150px;
+    height: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .container img {
-    width: 100px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .container p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .container {
+    width: 120px;
+    height: 120px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .container p {
+    font-size: 10px;
+  }
+  .container img {
+    width: 70px;
   }
   .head h1 {
     font-size: 25px;
@@ -272,11 +282,5 @@ body {
   }
   .tips-box1 {
     margin: 20px 8%;
-  }
-  .container {
-    width: 120px;
-  }
-  .container img {
-    width: 80px;
   }
 }
