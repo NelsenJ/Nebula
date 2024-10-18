@@ -146,15 +146,16 @@ div.body{
   padding-right: 30px;
 }
 
-.container div.girl,
-.container div.man{
+.container .girl,
+.container .man{
   width: 120px;
   height: 120px;
-  background-color: black;
+
   border-radius: 50%;
   transition: 0.1s ease;
   scale: 1.5;
 }
+
 
 .container .girl{
   background-image: url(../images/sign/Screenshot\ 2024-08-25\ 193745.png);
@@ -168,12 +169,27 @@ div.body{
   background-position: center;
 }
 
-.container div.girl:hover,
-.container div.man:hover,
-.container div.girl:active,
-.container div.man:active{
+.container .girl:hover,
+.container .man:hover{
   outline: 7px solid var(--hover-choose-profile);
 }
+
+.container input[type="radio"]{
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  transition: 0.1s ease;
+}
+
+.container .girl:has(input[type="radio"]:checked),
+.container .man:has(input[type="radio"]:checked){
+  outline: 7px solid var(--hover-choose-profile);
+  transition: 0.1s ease;
+}
+
+
+
+
 
 .container .info{
   margin-top: 40px;
