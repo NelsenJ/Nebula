@@ -11,3 +11,23 @@ window.onload = function () {
     mobile_menu.classList.toggle("is-active");
   });
 };
+
+let darkmode = localStorage.getItem('darkmodeNebula')
+const themeSwitch = document.getElementById('theme-switch')
+
+const enableDarkmode = () => {
+  document.body.classList.add('darkmode')
+  localStorage.setItem('darkmodeNebula', 'active')
+}
+
+const disableDarkmode = () => {
+  document.body.classList.remove('darkmode')
+  localStorage.setItem('darkmodeNebula', null)
+}
+
+if(darkmode === "active") enableDarkmode()
+
+themeSwitch.addEventListener("click", () => {
+  darkmode = localStorage.getItem('darkmodeNebula')
+  darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
