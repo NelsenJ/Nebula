@@ -75,7 +75,7 @@
     border-top-left-radius: 30px;
     position: absolute;
     right: 0;
-    padding: 40px 50px;
+    padding: 20px 30px;
     gap: 20px;
   }
 
@@ -108,7 +108,7 @@
   .container .inputbox span {
     font-family: var(--opensans);
     color: #fff;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     width: 25%;
   }
@@ -118,7 +118,7 @@
     border: none;
     outline: none;
     background: transparent;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     color: #fff;
     width: calc(100% - 26% - 2px);
@@ -127,7 +127,7 @@
   .container h1 {
     color: var(--on-primary-font);
     font-family: var(--poppins);
-    font-size: 47px;
+    font-size: 35px;
     margin-top: 10px;
     text-align: center;
   }
@@ -217,7 +217,7 @@
   .container .info p {
     color: var(--on-primary-font);
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0px auto;
     position: relative;
     width: max-content;
@@ -230,7 +230,7 @@
     width: 50px;
     background-color: transparent;
     color: var(--on-pink-med-font);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -248,7 +248,7 @@
     width: fit-content;
     transform: translateX(-5px);
     color: var(--on-pink-med-font);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -266,7 +266,7 @@
     border: none;
     outline: none;
     border-radius: 20px;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     font-family: var(--poppins);
     transition: 0.2s ease;
@@ -279,20 +279,12 @@
 }
 
 @media (min-width: 930px) and (max-width: 1250px) {
-  h1 {
-    font-size: 34px !important;
-  }
-  /* 
-  .container h1 {
-    font-size: 32px;
-  } */
-
   .container .inputbox input,
   .container .inputbox input:focus {
     border: none;
     outline: none;
     background: transparent;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     color: #fff;
     width: calc(100% - 26% - 20px);
@@ -350,7 +342,7 @@
     border: none;
     outline: none;
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     font-family: var(--poppins);
     transition: 0.2s ease;
@@ -431,7 +423,7 @@
   .container h1 {
     color: var(--on-primary-font);
     font-family: var(--poppins);
-    font-size: 30px;
+    font-size: 25px;
     transform: translateY(-25px);
   }
 
@@ -497,6 +489,13 @@
     transform: translateY(-10px);
   }
 
+  .container .info p {
+    color: var(--on-primary-font);
+    font-weight: bold;
+    font-size: 20px;
+    width: 150px;
+  }
+
   .container .height,
   .container .weight {
     width: 120px;
@@ -508,13 +507,6 @@
 
   .container .height {
     transform: translateX(-10px);
-  }
-
-  .container .info p {
-    color: var(--on-primary-font);
-    font-weight: bold;
-    font-size: 20px;
-    width: 150px;
   }
 
   .container .height input,
@@ -562,6 +554,7 @@
     font-family: var(--poppins);
     transform: translateY(10px);
     transition: 0.2s ease;
+    margin-bottom: 10px;
   }
 
   .container button:hover {
@@ -583,7 +576,7 @@
   .container h1 {
     color: var(--on-primary-font);
     font-family: var(--poppins);
-    font-size: 27px;
+    font-size: 25px;
     transform: translateY(-25px);
   }
   .container .inputbox input,
