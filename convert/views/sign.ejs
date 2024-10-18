@@ -22,17 +22,15 @@
                 <div class="inputbox">
                     <label for="User">Nama</label>
                     <span>:</span>
-                    <input id="User" name="name" type="text" placeholder="">
+                    <input id="User" name="name" type="text" placeholder="" required>
                 </div>
                 <h1>Pilih Karakter Profilemu</h1>
                 <div class="profile">
                     <div class="girl">
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
                     </div>
                     <div class="man">
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="male" required>
                     </div>
                 </div>
                 <div class="info">
@@ -41,7 +39,7 @@
                             <p>Tinggi Badan</p>
                         </div>
                         <div class="FormH">
-                            <input id="height" name="height" type="number">
+                            <input id="height" name="height" type="number" min="100" required>
                             <label for="height">cm</label>
                         </div>
                     </div>
@@ -50,7 +48,7 @@
                             <p>Berat Badan</p>
                         </div>
                         <div class="FormW">
-                            <input id="weight" name="weight" type="number">
+                            <input id="weight" name="weight" type="number" min="1" required>
                             <label for="weight">kg</label>
                         </div>
                     </div>
