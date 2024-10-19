@@ -2,43 +2,45 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel');
 
-// Home Page Route
+// First route - sign page
 router.get('/', (req, res) => {
-  res.render('home'); // Will render views/home.ejs (you will create this page)
+  res.render('sign');
 });
 
-// Profile Page Route
+// Profile route
 router.get('/profile', (req, res) => {
-  res.render('profile'); // Will render views/profile.ejs
+  res.render('profile', { user: req.session.user });
 });
 
-// Sign-in Page Route (GET)
-router.get('/sign', (req, res) => {
-  res.render('sign'); // Will render views/sign.ejs
+// Home route
+router.get('/home', (req, res) => {
+  res.render('home', { user: req.session.user });
 });
 
-// Education Page Route
+// Education route
 router.get('/education', (req, res) => {
-  res.render('education'); // Will render views/education.ejs
+  res.render('education', { user: req.session.user });
 });
 
-// Introduction Page Route
+// Introduction route
 router.get('/introduction', (req, res) => {
-  res.render('introduction'); // Will render views/introduction.ejs
+  res.render('introduction', { user: req.session.user });
 });
 
-//health-stats
-router.get('/health-status', (req, res) =>{
-  res.render('health-status'); // Will render views/health-status.ejs
-})
+// Health stats route
+router.get('/health-stats', (req, res) => {
+  res.render('health-status', { user: req.session.user });
+});
 
+// Calculator route
+router.get('/calc', (req, res) => {
+  res.render('calc', { user: req.session.user });
+});
 
-// POST Route for sign-in page to add a user to MongoDB
+// Handle form submission from the sign-in page
 router.post('/sign', async (req, res) => {
-  // Collect form data from the sign.ejs form
   const { name, gender, height, weight } = req.body;
 
-  // Create a new User instance using the form data
   const newUser = new User({
     name: name,
     gender: gender,
@@ -47,12 +49,20 @@ router.post('/sign', async (req, res) => {
   });
 
   try {
-    // Save the new user to MongoDB
+    // Save the user data in the database
     await newUser.save();
     console.log('User saved:', newUser);
 
-    // Redirect to profile or home page (you can change this)
-    res.redirect('/'); // Redirect after success
+    // Store the user data in the session
+    req.session.user = {
+      name: newUser.name,
+      gender: newUser.gender,
+      height: newUser.height,
+      weight: newUser.weight
+    };
+
+    // Redirect to the home page after submission
+    res.redirect('/home');
   } catch (err) {
     // Handle any errors that occur while saving
     console.error('Error saving user:', err);
