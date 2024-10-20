@@ -9,15 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <%- include('partials/nav') %>
     <%- include("partials/dummy") %>
-    <div class="head">
+    <div class="head1">
       <h1>Status Kesehatan Kamu</h1>
       <p>Kontrol dengan baik yaa!</p>
     </div>
@@ -25,14 +23,16 @@
     <div class="container-health">
       <div class="left-health">
         <div class="top-health">
-
+          <p>Kalkulator BMI</p>
+          <!-- Add your BMI content here -->
         </div>
         <div class="bottom-health">
-
+          <p>Data Diri</p>
+          <!-- Add your personal info here -->
         </div>
       </div>
       <div class="right-health">
-        <div style="width: 75%; margin: auto; height: 100%;">
+        <div style="width: 70%; margin: 10px 0px; height: 100%;">
           <canvas id="myLineChart"></canvas>
         </div>
       </div>
