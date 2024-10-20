@@ -22,7 +22,23 @@
 .darkmode{
   --base-variant: #101425;
   --primary-color: #3a435d;
-
+  --body: #fefefe;
+  --header: #ffc1cf;
+  --profile: palevioletred;
+  --color: #000;
+  --background-a: #ffc1cf;
+  --hover: #ff9bb177;
+  --hamburg: #fff;
+  --darkmodelogo: #fff;
+  --child2: #a0bee1;
+  --child3: #78d1cc;;
+  --child4: #a0efd1;
+  --child5: #fcead2;
+  --child6: #ff9bb1;
+  --child8: #e1e1e1;
+  --child9: #343434;
+  --darkmode-a-color: #fff;
+  --darkmode-btn: #fff;
 }
 
 * {

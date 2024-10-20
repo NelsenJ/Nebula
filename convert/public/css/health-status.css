@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------------------*\
+#Color
+\*-----------------------------------*/
+
+:root{
+    --h1: #000;
+}
+
+
+/*-----------------------------------*\
+#Font
+\*-----------------------------------*/
+
+:root{
+    --opensans: "Open Sans", sans-serif;
+    --poppins: "Poppins", sans-serif;
+}
+
+/*-----------------------------------*\
+#Desktop View
+\*-----------------------------------*/
+
+.head {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.head h1 {
+    margin: 0;
+    margin-top: 8px;
+    color: var(--h1);
+    text-align: center;
+    font-size: 35.7px;
+}
+
+.head p {
+    margin: 0;
+    font-family: var(--poppins);
+    font-size: 16.6px
+}
+
+div.container-health{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding:  0px 50px;
+    width: 100vw;
+    height: 72vh;
+    background-color: black;
+}
+
+div.container-health div.left-health{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.container-health div.left-health div.top-health{
+    width: 100%;
+    height: 50%;
+    background-color: #b4dadb;
+}
+
+div.container-health div.left-health div.bottom-health{
+    width: 100%;
+    height: 45%;
+    background-color: #dce683;
+}
+
+div.container-health div.right-health{
+    width: 47%;
+    height: 76%;
+    background-color: #fbd5c0;
+}
+
