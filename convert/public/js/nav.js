@@ -12,22 +12,22 @@ window.onload = function () {
   });
 };
 
-let darkmode = localStorage.getItem('darkmodeNebula')
-const themeSwitch = document.getElementById('theme-switch')
+let darkmode = localStorage.getItem("darkmodeNebula");
+const themeSwitch = document.getElementById("theme-switch");
 
 const enableDarkmode = () => {
-  document.body.classList.add('darkmode')
-  localStorage.setItem('darkmodeNebula', 'active')
-}
+  document.body.classList.add("darkmode");
+  localStorage.setItem("darkmodeNebula", "active");
+};
 
 const disableDarkmode = () => {
-  document.body.classList.remove('darkmode')
-  localStorage.setItem('darkmodeNebula', null)
-}
+  document.body.classList.remove("darkmode");
+  localStorage.setItem("darkmodeNebula", null);
+};
 
-if(darkmode === "active") enableDarkmode()
+if (darkmode === "active") enableDarkmode();
 
 themeSwitch.addEventListener("click", () => {
   darkmode = localStorage.getItem('darkmodeNebula')
   darkmode !== "active" ? enableDarkmode() : disableDarkmode()
-})
+});
