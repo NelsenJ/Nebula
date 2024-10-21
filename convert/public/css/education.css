@@ -106,21 +106,31 @@ body {
 
 .container {
   background-color: salmon;
+<<<<<<< HEAD
   width: 220px;
   height: 220px;
   padding: 15px;
+=======
+  width: 180px;
+  height: fit-content;
+  padding: 5px;
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
   display: flex;
   margin: 8px 0;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
   border-radius: 15px;
 }
 
 .container p {
   font-size: 18px;
   font-weight: bolder;
+<<<<<<< HEAD
   text-transform: capitalize;
   margin-bottom: 15px;
 }
@@ -131,13 +141,26 @@ body {
 }
 
 /* .row1,
+=======
+}
+
+.container img {
+  margin-top: 15px;
+}
+
+.row1,
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
 .row2,
 .row3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 50px;
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
 
 .box1 {
   background-color: #ffb3c4;
@@ -182,12 +205,17 @@ body {
 }
 
 @media screen and (max-width: 750px) {
+<<<<<<< HEAD
   .tips-box {
     gap: 10px;
   }
   .container {
     width: 200px;
     height: 200px;
+=======
+  .container {
+    width: 150px;
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
   }
   .container p {
     font-size: 15px;
@@ -212,6 +240,7 @@ body {
     margin: 20px 16%;
   }
 }
+<<<<<<< HEAD
 @media screen and (max-width: 480px) {
   .tips-box {
     padding-left: 15px;
@@ -223,10 +252,25 @@ body {
   }
   .container p {
     font-size: 13px;
+=======
+@media screen and (max-width: 440px) {
+  .container {
+    width: 150px;
+  }
+  .container p {
+    font-size: 14px;
+  }
+  .container img {
+    width: 120px;
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
   }
   .head h1 {
     font-size: 25px;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
   .box h1 {
     font-size: 68px;
   }
@@ -239,6 +283,7 @@ body {
   .tips-box1 {
     margin: 20px 8%;
   }
+<<<<<<< HEAD
   .container img {
     width: 90px;
   }
@@ -270,6 +315,25 @@ body {
   }
   .container img {
     width: 70px;
+=======
+
+  .container {
+    width: 130px;
+  }
+  .container img {
+    width: 90px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .container {
+    width: 130px;
+  }
+  .container p {
+    font-size: 13px;
+  }
+  .container img {
+    width: 100px;
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
   }
   .head h1 {
     font-size: 25px;
@@ -287,4 +351,14 @@ body {
   .tips-box1 {
     margin: 20px 8%;
   }
+<<<<<<< HEAD
+=======
+
+  .container {
+    width: 120px;
+  }
+  .container img {
+    width: 80px;
+  }
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
 }
