@@ -77,6 +77,8 @@
     right: 0;
     padding: 20px 30px;
     gap: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   /* .container::before{
