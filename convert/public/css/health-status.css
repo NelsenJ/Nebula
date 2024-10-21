@@ -84,7 +84,63 @@ div.container-health div.left-health div.bottom-health {
     height: 45%;
     background-color: #dce683;
     border-radius: 15px;
-    padding: 15px;
+    padding: 15px 20px;
+    font-family: var(--opensans);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.container-health div.left-health div.bottom-health div.topInfo{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: var(--opensans);
+}
+
+
+
+div.topInfo h1.edit{
+    font-family: var(--opensans);
+    color: #ea444e;
+    font-weight: 600;
+}
+
+div.topInfo h1{
+    font-size: 35px;
+}
+div.container-health div.left-health div.bottom-health div.information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+}
+
+div.container-health div.left-health div.bottom-health div.information div.info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.container-health div.left-health div.bottom-health div.information div.info div.text{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+div.infos{
+    text-decoration: underline;
+    color: #00650d;
+}
+
+
+div.info div.text{
+    width: 43%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 div.container-health div.right-health {
@@ -93,7 +149,40 @@ div.container-health div.right-health {
     background-color: #fbd5c0;
     border-radius: 15px;
     padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+div.container-health div.right-health div.text{
+    font-family: var(--poppins);
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+div.container-health div.right-health div.text h1{
+    font-size: 31px;
+}
+
+div.container-health div.right-health div.text div.value{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 10px;
+}
+
+div.container-health div.right-health div.text div.value div.label{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+}
+
+
+
 
 /*-----------------------------------*\
 #Responsive for Mobile View

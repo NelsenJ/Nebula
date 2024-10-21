@@ -1,11 +1,19 @@
 const ctx = document.getElementById('myLineChart').getContext('2d');
+const data = [15, 25, 20, 35, 38];  // Your data points
+
+// Calculate the highest value from the data array
+const highestValue = Math.max(...data);
+const lowestValue = Math.min(...data);
+const currentValue = data[data.length - 1];
+
+// Create the chart
 const myLineChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],  // X-axis labels
         datasets: [{
             label: 'Dataset',
-            data: [15, 25, 20, 35, 38],      // Y-axis data points
+            data: data,      // Y-axis data points
             borderColor: 'rgba(255, 99, 132, 1)',  // Red line color
             borderWidth: 2.5,                 // Line thickness
             tension: 0,                   // Slightly curved line
@@ -51,3 +59,11 @@ const myLineChart = new Chart(ctx, {
         }
     }
 });
+
+// Update the highest value in the HTML
+document.querySelector('.highestValue').textContent = `${highestValue} mg/dl`;
+document.querySelector('.lowestValue').textContent = `${lowestValue} mg/dl`;
+document.querySelector('.currentValue').textContent = `${currentValue} mg/dl`;
+
+
+

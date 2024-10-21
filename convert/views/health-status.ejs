@@ -27,14 +27,39 @@
           <!-- Add your BMI content here -->
         </div>
         <div class="bottom-health">
-          <p>Data Diri</p>
-          <!-- Add your personal info here -->
+          <div class="topInfo">
+            <h1>Data Diri :</h1>
+            <h1 class="edit">Edit</h1>
+          </div>
+          <div class="information">
+            <div class="info">
+              <div class="text"><p>Tinggi Badan </p><span>:</span></div>
+              <div class="infos">161.0cm</div>
+            </div>
+            <div class="info">
+              <div class="text"><p>Berat Badan </p><span>:</span></div>
+              <div class="infos">55.9kg</div>
+            </div>
+            <div class="info">
+              <div class="text"><p>Kadar Gula Darah </p><span>:</span></div>
+              <div class="infos">55.9kg</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="right-health">
-        <div style="width: 70%; margin: 10px 0px; height: 100%;">
+        <div style="width: 65%; margin: 10px 0px; height: 100%;">
           <canvas id="myLineChart"></canvas>
         </div>
+        <div class="text">
+          <h1>Tingkat Gula Darah</h1>
+          <div class="information">
+            <div class="current value"><div class="label">Saat ini <span>:</span></div> <p class="currentValue"></p></div>
+            <div class="highest value"><div class="label">Tertinggi <span>:</span></div> <p class="highestValue"></p></div>
+            <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue"></p></div>
+          </div>
+        </div>
+
       </div>
     </div>
 </body>
