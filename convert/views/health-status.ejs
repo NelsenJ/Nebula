@@ -24,8 +24,23 @@
       <div class="left-health">
         <div class="top-health">
           <p>Kalkulator BMI</p>
-          <!-- Add your BMI content here -->
+          <!-- BMI Calculator Section -->
+          <div class="bmi-calculator">
+            <div class="bmi-scale">
+              <div class="bmi-range underweight"></div>
+              <div class="bmi-range healthy"></div>
+              <div class="bmi-range overweight"></div>
+              <div class="bmi-range obese"></div>
+              <div class="bmi-indicator" style="left: 30%;"></div> <!-- Adjust based on BMI -->
+            </div>
+            <div class="bmi-info">
+              <p>Berat Badan: <span>55.9 kg</span></p>
+              <p>Tinggi Badan: <span>161 cm</span></p>
+              <p>BMI: <span>21.30</span></p>
+            </div>
+          </div>
         </div>
+
         <div class="bottom-health">
           <div class="topInfo">
             <h1>Data Diri :</h1>
@@ -47,6 +62,7 @@
           </div>
         </div>
       </div>
+      
       <div class="right-health">
         <div style="width: 65%; margin: 10px 0px; height: 100%;">
           <canvas id="myLineChart"></canvas>
@@ -59,7 +75,6 @@
             <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue"></p></div>
           </div>
         </div>
-
       </div>
     </div>
 </body>

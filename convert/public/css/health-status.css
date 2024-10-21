@@ -211,3 +211,74 @@ div.container-health div.right-health div.text div.value div.label{
         height: auto;
     }
 }
+
+/* BMI Calculator */
+.bmi-calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.bmi-scale {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 30px;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-range {
+    height: 100%;
+}
+
+.bmi-range.underweight {
+    width: 18%;
+    background-color: #2663de; /* Blue for Underweight */
+}
+
+.bmi-range.healthy {
+    width: 32%;
+    background-color: #6cc451; /* Green for Healthy */
+}
+
+.bmi-range.overweight {
+    width: 25%;
+    background-color: #f7d56d; /* Yellow for Overweight */
+}
+
+.bmi-range.obese {
+    width: 25%;
+    background-color: #e14c4c; /* Red for Obese */
+}
+
+.bmi-indicator {
+    position: absolute;
+    top: -5px;
+    width: 3px;
+    height: 40px;
+    background-color: #000;
+    transition: left 0.3s ease;
+    border-radius: 2px;
+}
+
+.bmi-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--opensans);
+    font-size: 18px;
+}
+
+.bmi-info p {
+    margin: 5px 0;
+}
+
+.bmi-info span {
+    font-weight: bold;
+}
+
