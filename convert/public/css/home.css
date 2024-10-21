@@ -1,4 +1,4 @@
-
+/* HEADER */
 .header {
   background-color: #a0bee1;
   margin: 20px 5%;
@@ -9,78 +9,90 @@
   align-items: center;
   padding-bottom: 8px;
 }
-.header h1{
+.header h1 {
   margin: 20px 0;
   color: white;
   font-family: "Poppins", sans-serif;
+  font-size: 2rem; /* Responsif dengan satuan rem */
 }
-.header button{
+.header button {
   background-color: #5b90cf;
   border: 2px solid #d3e8ff;
   border-radius: 30px;
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: 600;
   padding: 10px 40px;
   color: #d3e8ff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.header img{
+.header img {
   margin-top: 20px;
   width: 35px;
 }
 
+/* MAIN CONTENT */
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* TITLE */
 .title {
   margin-top: 40px;
   text-align: center;
 }
-
 .title h1 {
-  font-size: 40px;
+  font-size: 2.5rem; /* Responsif dengan satuan rem */
   font-family: "Canva Sans", sans-serif;
 }
-
 .title p {
   margin: 5px 0;
-  font-size: 20px;
+  font-size: 1.25rem; /* Responsif dengan satuan rem */
   font-family: "Canva Sans", sans-serif;
 }
 
-.container{
-  display: grid;
+/* CONTAINER & BOXES */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   width: 88%;
   height: fit-content;
-  grid-template-columns: auto auto;
-  /* background-color: black; */
   margin: 30px 5px;
-  gap: 10% 7%;
-  align-items: center;
 }
 
 .box {
-  width: 100%;
+  flex-basis: 45%;
+  max-width: 600px; /* Batasi ukuran maksimal */
+  min-width: 250px; /* Batasi ukuran minimal */
   height: 150px;
   padding: 4%;
   border-radius: 32px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;  
+  justify-content: space-evenly;
+  margin: 10px;
+  overflow: hidden; /* Mencegah konten keluar dari box */
 }
+
 .box p {
-  font-family: "Poppins", sans-serif;;
+  font-family: "Poppins", sans-serif;
   color: white;
-  font-size: 25px;
-  /* margin: 20px 0; */
+  font-size: 1.25rem; /* Responsif dengan satuan rem */
+  display: flex;
+  align-items: center;
+  word-wrap: break-word; /* Pecah kata jika terlalu panjang */
 }
+
 .box img {
   width: 70%;
   height: 100%;
+  object-fit: contain; /* Sesuaikan gambar ke dalam box */
 }
+
+/* WARNA BOXES */
 .box1 {
   background-color: #ff9bb1;
 }
@@ -94,3 +106,35 @@
   background-color: #728aac;
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+  .box p {
+    font-size: 1.1rem; /* Ukuran lebih kecil di layar sedang */
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex-basis: 100%; /* Box akan menjadi satu kolom di layar kecil */
+    height: auto; /* Tinggi box menyesuaikan isi */
+  }
+
+  .box p {
+    font-size: 1rem; /* Ukuran lebih kecil di layar kecil */
+  }
+}
+
+@media (max-width: 500px) {
+  .header h1 {
+    font-size: 1.75rem; /* Ukuran judul lebih kecil */
+  }
+
+  .header button {
+    font-size: 1.25rem; /* Ukuran tombol lebih kecil */
+    padding: 8px 30px; /* Sesuaikan padding untuk layar kecil */
+  }
+
+  .box p {
+    font-size: 0.9rem; /* Ukuran teks lebih kecil di layar sangat kecil */
+  }
+}
