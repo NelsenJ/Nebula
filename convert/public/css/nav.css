@@ -1,4 +1,4 @@
-:root{
+:root {
   --base-variant: #e8e9ed;
   --primary-color: #3a435d;
   --body: #fefefe;
@@ -10,7 +10,7 @@
   --hamburg: #fff;
   --darkmodelogo: #fff;
   --child2: #a0bee1;
-  --child3: #78d1cc;;
+  --child3: #78d1cc;
   --child4: #a0efd1;
   --child5: #fcead2;
   --child6: #ff9bb1;
@@ -19,7 +19,7 @@
   --darkmode-a-color: #fff;
   --darkmode-btn: #fff;
 }
-.darkmode{
+.darkmode {
   --base-variant: #101425;
   --primary-color: #3a435d;
   --body: #fefefe;
@@ -50,7 +50,7 @@
   box-sizing: border-box;
 }
 body {
-  background: var(--body)
+  background: var(--body);
 }
 header {
   width: 100%;
@@ -109,7 +109,7 @@ header {
   margin: 0 5px;
 }
 .nav-bar a:hover {
-  background-color: var(--hover)
+  background-color: var(--hover);
 }
 .hamburger {
   display: none;
@@ -119,9 +119,9 @@ header {
   display: none;
 }
 
-button{
+/* button {
   border: none;
-  padding: .8em 2em;
+  padding: 0.8em 2em;
   background-color: var(--primary-color);
   color: white;
   border-radius: 4px;
@@ -129,9 +129,18 @@ button{
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
-}
+} */
 
-#theme-switch{
+#theme-switch {
+  border: none;
+  padding: 0.8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
   height: 50px;
   width: 50px;
   padding: 0;
@@ -144,16 +153,16 @@ button{
   bottom: 20px;
   right: 20px;
 }
-#theme-switch svg{
+#theme-switch svg {
   fill: var(--primary-color);
 }
-#theme-switch svg:last-child{
+#theme-switch svg:last-child {
   display: none;
 }
-.darkmode #theme-switch svg:first-child{
+.darkmode #theme-switch svg:first-child {
   display: none;
 }
-.darkmode #theme-switch svg:last-child{
+.darkmode #theme-switch svg:last-child {
   display: block;
 }
 
@@ -167,7 +176,7 @@ button{
   } */
 }
 @media screen and (max-width: 1150px) {
-  #theme-switch{
+  #theme-switch {
     display: none;
   }
 
@@ -245,8 +254,8 @@ button{
     font-size: 23px;
     padding-right: 10px;
   }
-  .mobile-nav i.bx{
-    color: var(--darkmodelogo)
+  .mobile-nav i.bx {
+    color: var(--darkmodelogo);
   }
   .mobile-nav a:nth-child(2) {
     background-color: var(--child2);
@@ -274,36 +283,30 @@ button{
     padding-top: 100px;
   }
 
-  div.darkbtn{
+  div.darkbtn {
     width: 48px;
     height: 25.6px;
     border-radius: 15px;
     background-color: var(--darkmode-btn);
-    box-shadow: inset 0 8px 60px rgba(0,0,0, .1),
-                inset 0 8px 8px rgba(0,0,0, .1),
-                inset 0 -4px 4px rgba(0,0,0, .1);
-                position: relative;
-  
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1), inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+
     display: flex;
     align-items: flex-start;
     cursor: pointer;
-    padding: 4px 1px
+    padding: 4px 1px;
   }
 
-  div.iconcontainer{
+  div.iconcontainer {
     background-color: var(--darkmode-a-color);
     width: 22.4px;
     height: 22.4px;
     border-radius: 50%;
-  
+
     position: absolute;
-  
-    box-shadow: 0 8px 40px rgba(0,0,0, .2);
-  
-    transition: transform .3s ease;
+
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease;
   }
-
-
 }
-
-
