@@ -146,17 +146,28 @@ div.body{
   padding-right: 30px;
 }
 
+<<<<<<< HEAD
 .container .girl,
 .container .man{
   width: 120px;
   height: 120px;
 
+=======
+.container div.girl,
+.container div.man{
+  width: 120px;
+  height: 120px;
+  background-color: black;
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
   border-radius: 50%;
   transition: 0.1s ease;
   scale: 1.5;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
 .container .girl{
   background-image: url(../images/sign/Screenshot\ 2024-08-25\ 193745.png);
   background-size: 125% 125%;
@@ -169,6 +180,7 @@ div.body{
   background-position: center;
 }
 
+<<<<<<< HEAD
 .container .girl:hover,
 .container .man:hover{
   outline: 7px solid var(--hover-choose-profile);
@@ -195,6 +207,15 @@ div.body{
 
 
 
+=======
+.container div.girl:hover,
+.container div.man:hover,
+.container div.girl:active,
+.container div.man:active{
+  outline: 7px solid var(--hover-choose-profile);
+}
+
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
 .container .info{
   margin-top: 40px;
   display: flex;
@@ -475,6 +496,7 @@ body{
   outline: 7px solid var(--hover-choose-profile);
 }
 
+<<<<<<< HEAD
 .container input[type="radio"]{
   width: 120px;
   height: 120px;
@@ -494,6 +516,8 @@ body{
 
 
 
+=======
+>>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
 .container .info{
   margin-top: 20px;
   display: flex;
