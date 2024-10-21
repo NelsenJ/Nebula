@@ -5,59 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Status Kesehatan</title>
   <link rel="stylesheet" href="/css/global.css" /> 
-  <link rel="stylesheet" href="/css/health-status.css">
+  <link rel="stylesheet" href="/css/health-status.css" /> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <%- include("partials/nav") %>
-
-  <div class="main">
-
-    <div class="title">
+    <%- include('partials/nav') %>
+    <%- include("partials/dummy") %>
+    <div class="head1">
       <h1>Status Kesehatan Kamu</h1>
       <p>Kontrol dengan baik yaa!</p>
     </div>
-    <div class="container">
-      <div class="left-row">
   
-        <div class="bmi">
-          <h1>Kalkulator BMI</h1>
-          <img src="">
-          <p class="info">Berat Badan yang Sehat</p>
-          <div class="stats">
-            <p>Berat Badan : 55.9kg</p>
-            <p>Tinggi Badan : 161cm</p>
+    <div class="container-health">
+      <div class="left-health">
+        <div class="top-health">
+          <p>Kalkulator BMI</p>
+          <!-- BMI Calculator Section -->
+          <div class="bmi-calculator">
+            <div class="bmi-scale">
+              <div class="bmi-range underweight"></div>
+              <div class="bmi-range healthy"></div>
+              <div class="bmi-range overweight"></div>
+              <div class="bmi-range obese"></div>
+              <div class="bmi-indicator" style="left: 30%;"></div> <!-- Adjust based on BMI -->
+            </div>
+            <div class="bmi-info">
+              <p>Berat Badan: <span>55.9 kg</span></p>
+              <p>Tinggi Badan: <span>161 cm</span></p>
+              <p>BMI: <span>21.30</span></p>
+            </div>
           </div>
         </div>
-  
-        <div class="data">
-  
-          <div class="head">
-            <h3>Data Diri :</h3>
-            <h3>EDIT</h3>
+
+        <div class="bottom-health">
+          <div class="topInfo">
+            <h1>Data Diri :</h1>
+            <h1 class="edit">Edit</h1>
           </div>
-  
-          <div class="isi-data">
-            <div class="tinggi">
-              <p>Tinggi Badan :</p>
-              <p>161.0cm</p>
+          <div class="information">
+            <div class="info">
+              <div class="text"><p>Tinggi Badan </p><span>:</span></div>
+              <div class="infos">161.0cm</div>
             </div>
-            <div class="berat">
-              <p>Berat Badan :</p>
-              <p>55.9kg</p>
+            <div class="info">
+              <div class="text"><p>Berat Badan </p><span>:</span></div>
+              <div class="infos">55.9kg</div>
             </div>
-            <div class="gula">
-              <p>Tinggi Gula Darah :</p>
-              <p>55.9kg</p>
+            <div class="info">
+              <div class="text"><p>Kadar Gula Darah </p><span>:</span></div>
+              <div class="infos">55.9kg</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="right-row">
-        
+      
+      <div class="right-health">
+        <div style="width: 65%; margin: 10px 0px; height: 100%;">
+          <canvas id="myLineChart"></canvas>
+        </div>
+        <div class="text">
+          <h1>Tingkat Gula Darah</h1>
+          <div class="information">
+            <div class="current value"><div class="label">Saat ini <span>:</span></div> <p class="currentValue"></p></div>
+            <div class="highest value"><div class="label">Tertinggi <span>:</span></div> <p class="highestValue"></p></div>
+            <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue"></p></div>
+          </div>
+        </div>
       </div>
     </div>
-
-  </div>
-  <script src="/js/nav.js"></script>
 </body>
+<script src="/js/health.js"></script>
 </html>
