@@ -40,9 +40,5 @@ app.use('/', require('./routes/index'));
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://127.0.0.1:${PORT}`);
-<<<<<<< HEAD
   console.log(`Server running on http://127.0.0.1:${PORT}/home`);
 });
-=======
-});
->>>>>>> c6ab4867c1ced834d40b06a18ed4db5951a9a358
