@@ -66,12 +66,12 @@
 }
 
 ul {
-  list-style-type: circle !important; /* Ensures circles are used for list items */
+  /* list-style-type: circle !important; Ensures circles are used for list items */
   padding-left: 30px; /* Adds space for bullets to show */
 }
 
 li {
-  margin-bottom: 10px; /* Adds space between list items */
+  margin-bottom: 5px; /* Adds space between list items */
 }
 
 .card .bottom {
