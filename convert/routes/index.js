@@ -37,7 +37,12 @@ router.get('/recipes', (req, res) => {
   res.render('recipes', { user: req.session.user });
 });
 
-// Recipe route
+// Recipe-info route
+router.get('/recipe-info', (req, res) => {
+  res.render('recipe-info', { user: req.session.user });
+});
+
+// Calc route
 router.get('/calc', (req, res) => {
   res.render('calc', { user: req.session.user });
 });
