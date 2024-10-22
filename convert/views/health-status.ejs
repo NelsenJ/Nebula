@@ -59,20 +59,20 @@
         <div class="bottom-health">
           <div class="topInfo">
             <h1>Data Diri :</h1>
-            <h1 class="edit">Edit</h1>
+            <h1 class="edit" id="editButton">Edit</h1>
           </div>
           <div class="information">
             <div class="info">
               <div class="text"><p>Tinggi Badan </p><span>:</span></div>
-              <div class="infos">161.0 cm</div>
+              <div class="infos" contenteditable="false" id="heightInfo">161.0 cm</div>
             </div>
             <div class="info">
               <div class="text"><p>Berat Badan </p><span>:</span></div>
-              <div class="infos">55.9 kg</div>
+              <div class="infos" contenteditable="false" id="weightInfo">55.9 kg</div>
             </div>
             <div class="info">
               <div class="text"><p>Kadar Gula Darah </p><span>:</span></div>
-              <div class="infos">50 mg/dl</div>
+              <div class="infos" contenteditable="false" id="sugarInfo">50 mg/dl</div>
             </div>
           </div>
         </div>
@@ -82,6 +82,19 @@
         <div style="width: 65%; margin: 10px 0px; height: 100%;">
           <canvas id="myLineChart"></canvas>
         </div>
+      
+        <!-- Dropdown pilihan interval waktu -->
+        <div class="interval-selector">
+          <label for="timeInterval">Pilih Interval Waktu:</label>
+          <select id="timeInterval">
+            <option value="perDetik">Per Detik</option>
+            <option value="perMenit">Per Menit</option>
+            <option value="perJam">Per Jam</option>
+            <option value="perHari">Per Hari</option>
+            <option value="perBulan">Per Bulan</option>
+          </select>
+        </div>
+      
         <div class="text">
           <h1>Tingkat Gula Darah</h1>
           <div class="information">

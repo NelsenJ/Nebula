@@ -362,3 +362,24 @@ p.text-indicator{
     font-size: 1rem;
     font-weight: 500;
 }
+
+
+.interval-selector {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--poppins);
+  }
+  
+  .interval-selector label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .interval-selector select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
