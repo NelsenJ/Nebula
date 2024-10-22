@@ -10,6 +10,10 @@
   gap: 20px;
 }
 
+.card h1 {
+  font-size: 50px;
+}
+
 .recipe {
   padding: 3%;
 }
@@ -31,9 +35,13 @@
 }
 
 .image {
-  width: 50%;
+  width: 1000px;
   border-radius: 20px;
   border: 4px solid #f8a29e;
+  background-image: url(/images/recipe/cookie.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .image img{
@@ -53,14 +61,28 @@
   padding: 10px;
 }
 
-.bottom {
-  width: 40%;
+.text-box h3{
+  font-size: 20px;
+}
+
+li {
+  list-style-type: circle;
+}
+
+.card .bottom {
+  /* background-color: white; */
+  width: 100%;
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
 
 .bottom img {
   width: 30px;
+}
+
+.bottom p {
+  font-size: 25px;
 }
 
 .kcal {
@@ -70,7 +92,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 8px;
-  padding: 4px 3px;
+  padding: 5px 8px;
   align-items: center;
 }
 
@@ -81,6 +103,29 @@
   display: flex;
   flex-direction: row;
   border-radius: 8px;
-  padding: 4px 5px;
+  padding: 5px 8px;
   align-items: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 15px;
+  margin-right: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ce8985;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-block: 1.5em;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #ff9bb1; 
+  border-radius: 10px;
+  border: .1em solid #dc7070;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9bb1; 
 }
