@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .header {
   background-color: #a0bee1;
   margin: 20px 5%;
@@ -9,12 +13,12 @@
   align-items: center;
   padding-bottom: 8px;
 }
-.header h1{
+.header h1 {
   margin: 20px 0;
   color: white;
   font-family: "Poppins", sans-serif;
 }
-.header button{
+.header button {
   background-color: #5b90cf;
   border: 2px solid #d3e8ff;
   border-radius: 30px;
@@ -22,9 +26,9 @@
   font-weight: 600;
   padding: 10px 40px;
   color: #d3e8ff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.header img{
+.header img {
   margin-top: 20px;
   width: 35px;
 }
@@ -36,6 +40,8 @@
 }
 
 .title {
+  padding-left: 5%;
+  padding-right: 5%;
   margin-top: 40px;
   text-align: center;
 }
@@ -51,40 +57,45 @@
   font-family: "Canva Sans", sans-serif;
 }
 
-.container{
-  display: grid;
-  width: 88%;
+.container {
+  /* display: grid; */
+  width: fit-content;
   height: fit-content;
-  grid-template-columns: auto auto;
+  /* grid-template-columns: auto auto; */
   /* background-color: black; */
   margin: 30px 5px;
-  gap: 10% 7%;
+  /* gap: 10% 7%; */
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .box {
-  width: 100%;
+  width: 48%;
   height: 150px;
-  padding: 4%;
+  padding: 20px;
   border-radius: 32px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  gap: 10px;
-  justify-content: space-evenly;
+  gap: 5%;
   margin: 10px;
   overflow: hidden; /* Mencegah konten keluar dari box */
 }
 .box p {
-  font-family: "Poppins", sans-serif;;
+  font-family: "Poppins", sans-serif;
   color: white;
   font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* margin: 20px 0; */
 }
 .box img {
-  width: 38%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
 }
 .box1 {
   background-color: #ff9bb1;
@@ -99,3 +110,53 @@
   background-color: #728aac;
 }
 
+@media (max-width: 1222px) {
+  .box {
+    width: 45%;
+  }
+  .box p {
+    font-size: 23px;
+  }
+}
+@media (max-width: 965px) {
+  .box img {
+    height: 80px;
+    width: auto;
+  }
+  .box p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 675px) {
+  .box {
+    width: 100%;
+  }
+  .box p {
+    font-size: 23px;
+  }
+}
+@media (max-width: 800px) {
+  .title h1 {
+    font-size: 30px;
+  }
+  .title p {
+    font-size: 18px;
+  }
+  .box {
+    height: 100px;
+    border-radius: 20px;
+  }
+  .box img {
+    height: auto;
+    width: 80px;
+  }
+  .box p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 350px) {
+  .box p {
+    font-size: 13px;
+  }
+}
