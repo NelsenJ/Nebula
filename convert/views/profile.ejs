@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>DiaBeatz | Profile</title>
     <link rel="stylesheet" href="/css/global.css" /> 
     <link rel="stylesheet" href="/css/profile.css" /> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,18 +31,21 @@
                 <div class="option">
                     <div class="female choose">
                         <label for="female">Perempuan</label>
-                        <input type="checkbox" name="female" id="female">
+                        <input type="radio" id="female" name="gender" value="female">
                         
                     </div>
                     <div class="male choose">
                         <label for="male">Laki - Laki</label>
-                        <input type="checkbox" name="male" id="male">
+                        <input type="radio" id="male" name="gender" value="male">
                     </div>
                 </div>
             </div>
             <div class="input date">
                 <label for="Date">Pilih Tanggal Lahir </label>
-                <input type="date">
+                <div class="inputed">
+                    <input type="date" style="color: #fff;">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                </div>
             </div>
     
             <div class="measure">
@@ -71,5 +74,5 @@
         </div>
     </div>
 </body>
-<script src="node.js"></script>
+<script src="js/profile.js"></script>
 </html>

@@ -37,6 +37,11 @@ router.get('/recipes', (req, res) => {
   res.render('recipes', { user: req.session.user });
 });
 
+// Recipe route
+router.get('/calc', (req, res) => {
+  res.render('calc', { user: req.session.user });
+});
+
 // Handle form submission from the sign-in page
 router.post('/sign', async (req, res) => {
   const { name, gender, height, weight } = req.body;
