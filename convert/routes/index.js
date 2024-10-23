@@ -46,11 +46,10 @@ router.get('/recipe-info', (req, res) => {
 });
 
 
-// Calculator route
-
 router.get('/calc', (req, res) => {
   res.render('calc', { user: req.session.user });
 });
+
 
 // Handle form submission from the sign-in page (POST request)
 router.post('/', async (req, res) => {
