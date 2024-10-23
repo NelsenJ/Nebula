@@ -72,6 +72,9 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 10px;
+  justify-content: space-evenly;
+  margin: 10px;
+  overflow: hidden; /* Mencegah konten keluar dari box */
 }
 .box p {
   font-family: "Poppins", sans-serif;;

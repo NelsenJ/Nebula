@@ -13,6 +13,10 @@ body {
   margin-bottom: 20px;
 }
 
+.head {
+  padding-top: 30px;
+}
+
 .head h1 {
   margin: 0;
   margin-top: 8px;
@@ -127,6 +131,14 @@ body {
 }
 
 /* .row1,
+=======
+}
+
+.container img {
+  margin-top: 15px;
+}
+
+.row1,
 .row2,
 .row3 {
   display: flex;
@@ -134,6 +146,7 @@ body {
   justify-content: center;
   gap: 50px;
 } */
+
 
 .box1 {
   background-color: #ffb3c4;
@@ -208,6 +221,7 @@ body {
     margin: 20px 16%;
   }
 }
+
 @media screen and (max-width: 480px) {
   .tips-box {
     padding-left: 15px;
@@ -223,6 +237,7 @@ body {
   .head h1 {
     font-size: 25px;
   }
+
   .box h1 {
     font-size: 68px;
   }

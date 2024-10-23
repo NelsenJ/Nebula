@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------------------*\
+#Color
+\*-----------------------------------*/
+
+:root {
+    --h1: #000;
+    --opensans: "Open Sans", sans-serif;
+    --poppins: "Poppins", sans-serif;
+}
+
+/*-----------------------------------*\
+#Desktop View
+\*-----------------------------------*/
+
+.head1 {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.head1 h1 {
+    margin: 0;
+    margin-top: 8px;
+    color: var(--h1);
+    text-align: center;
+    font-family: var(--poppins);
+    font-size: 35.7px;
+}
+
+.head1 p {
+    margin: 0;
+    font-family: var(--poppins);
+    font-size: 16.6px;
+}
+
+div.container-health {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 50px;
+    width: 100vw;
+    height: 68vh;
+    background-color: white;
+    gap: 20px;
+}
+
+div.container-health div.left-health div.top-health,
+div.container-health div.left-health div.bottom-health,
+div.container-health div.right-health {
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+div.container-health div.left-health {
+    width: 47%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+div.container-health div.left-health div.top-health {
+    width: 100%;
+    height: 50%;
+    background-color: #b4dadb;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+div.container-health div.left-health div.bottom-health {
+    width: 100%;
+    height: 40%;
+    background-color: #dce683;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-family: var(--opensans);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.container-health div.left-health div.bottom-health div.topInfo{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: var(--opensans);
+}
+
+
+
+div.topInfo h1.edit{
+    font-family: var(--opensans);
+    color: #ea444e;
+    font-weight: 600;
+}
+
+div.topInfo h1{
+    font-size: 31px;
+}
+div.container-health div.left-health div.bottom-health div.information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+}
+
+div.container-health div.left-health div.bottom-health div.information div.info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.container-health div.left-health div.bottom-health div.information div.info div.text{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+div.infos{
+    color: #00650d;
+    display: flex;
+    flex-direction: row;
+    text-decoration: underline;
+}
+
+p.invis{
+    color: #dce683;
+    font-weight: 100;
+}
+
+div.info div.text{
+    width: 43%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.container-health div.right-health {
+    width: 50%;
+    height: 100%;
+    background-color: #fbd5c0;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.container-health div.right-health div.text{
+    font-family: var(--poppins);
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+div.container-health div.right-health div.text h1{
+    font-size: 31px;
+}
+
+div.container-health div.right-health div.text div.value{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 10px;
+}
+
+div.container-health div.right-health div.text div.value div.label{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+}
+
+
+
+
+/*-----------------------------------*\
+#Responsive for Mobile View
+\*-----------------------------------*/
+
+@media (max-width: 768px) {
+    div.container-health {
+        flex-direction: column;
+        padding: 0 20px;
+        height: auto;
+    }
+
+    div.container-health div.left-health,
+    div.container-health div.right-health {
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    div.container-health div.right-health {
+        height: auto;
+    }
+
+    div.container-health div.left-health div.top-health,
+    div.container-health div.left-health div.bottom-health {
+        height: auto;
+    }
+}
+
+
+div.container-health div.left-health div.top-health {
+    width: 100%;
+    height: 57%;
+    background-color: #b4dadb;
+    border-radius: 15px;
+    padding: 15px 30px;
+    font-family: var(--poppins);
+}
+
+div.container-health div.left-health div.top-health p.titlee{
+    font-size: 31px;
+    font-weight: 700;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.bmi-calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.bmi-scale {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.bmi-range {
+    height: 100%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.07);
+    border-radius: 24px;
+    margin-right: 5px;
+}
+
+.bmi-range.underweight {
+    width: 20%;
+    background-color: #4c6c93;
+}
+
+.bmi-range.healthy {
+    width: 30%;
+    background-color: #75dc79; /* Green for Healthy */
+}
+
+.bmi-range.overweight {
+    width: 20%;
+    background-color: #dce683; /* Yellow for Overweight */
+}
+
+.bmi-range.obese {
+    width: 20%;
+    background-color: #ffb444; /* Red for Obese */
+}
+
+.bmi-range.overobesity {
+    width: 20%;
+    background-color: #ea444e; /* Red for Obese */
+}
+
+.bmi-indicator {
+    position: absolute;
+    top: -7px;
+    width: 7px;
+    height: 60px;
+    background-color: #000;
+    transition: left 0.3s ease;
+    border-radius: 5px;
+}
+
+p.num{
+    bottom: -38%;
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+p.num.zero{
+    left: -1.5%;
+    z-index: 100;
+}
+
+p.num.one{
+    left: calc(20% - 4.3%);
+    z-index: 100;
+}
+
+p.num.two{
+    left: calc(50% - 6.7%);
+    z-index: 100;
+}
+
+p.num.three{
+    left: calc(70% - 8.2%);
+    z-index: 100;
+}
+
+p.num.four{
+    left: calc(85% - 5.2%);
+    z-index: 100;
+}
+
+p.num.five{
+    left: calc(100% - 2.5%);
+    z-index: 100;
+}
+
+.bmi-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--opensans);
+    font-size: 18px;
+    height: 30%;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+div.bmi-informations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bmi-info p {
+    margin: 5px 0;
+}
+
+.bmi-info span {
+    font-weight: 600;
+    font-family: var(--poppins);
+}
+
+p.text-indicator{
+    position: absolute;
+    top: -40%;
+    left: calc(-30% - 50%);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+.interval-selector {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--poppins);
+  }
+  
+  .interval-selector label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .interval-selector select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
