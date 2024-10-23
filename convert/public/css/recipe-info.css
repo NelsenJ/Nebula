@@ -10,6 +10,11 @@
   gap: 20px;
 }
 
+.card h1 {
+  font-size: 50px;
+}
+
+
 .recipe {
   padding: 3%;
 }
@@ -27,7 +32,19 @@
   font-size: 30px;
   font-weight: 1000;
   padding: 0;
+  border: 0;
 }
+
+.image {
+  width: 1000px;
+  border-radius: 20px;
+  border: 4px solid #f8a29e;
+  background-image: url(/images/recipe/cookie.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .image {
   width: 50%;
@@ -52,6 +69,27 @@
   padding: 10px;
 }
 
+
+.text-box h3 {
+  font-size: 20px;
+}
+
+ul {
+  /* list-style-type: circle !important; Ensures circles are used for list items */
+  padding-left: 30px; /* Adds space for bullets to show */
+}
+
+li {
+  margin-bottom: 5px; /* Adds space between list items */
+}
+
+.card .bottom {
+  /* background-color: white; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  
 .bottom {
   width: 40%;
   display: flex;
@@ -62,6 +100,11 @@
   width: 30px;
 }
 
+
+.bottom p {
+  font-size: 25px;
+}
+
 .kcal {
   background-color: #78d1cc;
   width: fit-content;
@@ -69,7 +112,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 8px;
-  padding: 4px 3px;
+  padding: 5px 8px;
   align-items: center;
 }
 
@@ -80,6 +123,29 @@
   display: flex;
   flex-direction: row;
   border-radius: 8px;
-  padding: 4px 5px;
+  padding: 5px 8px;
   align-items: center;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+  margin-right: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ce8985;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-block: 1.5em;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #ff9bb1; 
+  border-radius: 10px;
+  border: .1em solid #dc7070;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9bb1; 
+}
+
