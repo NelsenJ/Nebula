@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DiaBeatz | Status Kesehatan</title>
-  <link rel="stylesheet" href="/css/global.css" /> 
-  <link rel="stylesheet" href="/css/health-status.css" /> 
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/health-status.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
       <h1>Status Kesehatan Kamu</h1>
       <p>Kontrol dengan baik yaa!</p>
     </div>
-  
+
     <div class="container-health">
       <div class="left-health">
         <div class="top-health">
@@ -29,7 +29,7 @@
             <div class="bmi-scale">
               <p class="num zero">10</p>
               <div class="bmi-range underweight"></div>
-              <p class="num one">18,5</p>
+              <p class="num one">18.5</p>
               <div class="bmi-range healthy"></div>
               <p class="num two">25</p>
               <div class="bmi-range overweight"></div>
@@ -38,20 +38,17 @@
               <p class="num four">35</p>
               <div class="bmi-range overobesity"></div>
               <p class="num five">40</p>
-              <div class="bmi-indicator" style="left: 30%;"><p class="text-indicator">22</p></div>
+              <div class="bmi-indicator" id="bmiIndicator" style="left: 30%;"><p class="text-indicator" id="bmiValue">22</p></div>
             </div>
-            <div class="range-indicator">
-              
-            </div>
+            <div class="range-indicator"></div>
             <div class="bmi-info">
               <div class="range-indicator">
-                <p class="rangeText" style="color: #00650d;">Berat Badan yang Sehat</p>
+                <p class="rangeText" id="bmiCategory" style="color: #00650d;">Berat Badan yang Sehat</p>
               </div>
               <div class="bmi-informations">
-                <p>Berat Badan: <span>55.9 kg</span></p>
-                <p>Tinggi Badan: <span>161 cm</span></p>
+                <p>Berat Badan: <span id="BmiWeight">55.9 kg</span></p>
+                <p>Tinggi Badan: <span id="BmiHeight">161 cm</span></p>
               </div>
-
             </div>
           </div>
         </div>
@@ -59,35 +56,42 @@
         <div class="bottom-health">
           <div class="topInfo">
             <h1>Data Diri :</h1>
-            <h1 class="edit">Edit</h1>
+            <h1 class="edit" id="editButton">Edit</h1>
           </div>
           <div class="information">
             <div class="info">
               <div class="text"><p>Tinggi Badan </p><span>:</span></div>
-              <div class="infos">161.0cm</div>
+              <div class="infos"><div contenteditable="false" id="heightInfo">161.0</div><p class="invis">i</p><p>cm</p></div>
             </div>
             <div class="info">
               <div class="text"><p>Berat Badan </p><span>:</span></div>
-              <div class="infos">55.9kg</div>
+              <div class="infos"><div contenteditable="false" id="weightInfo">55.9</div><p class="invis">i</p><p> kg</p></div>
             </div>
             <div class="info">
               <div class="text"><p>Kadar Gula Darah </p><span>:</span></div>
-              <div class="infos">50 mg/dl</div>
+              <div class="infos"><div contenteditable="false" id="sugarInfo">No Data</div><p class="invis">i</p><p> mg/dl</p></div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="right-health">
         <div style="width: 65%; margin: 10px 0px; height: 100%;">
           <canvas id="myLineChart"></canvas>
         </div>
+
+        <div>
+            <button id="dayButton">Day</button>
+            <button id="weekButton">Week</button>
+            <button id="monthButton">Month</button>
+        </div>
+
         <div class="text">
           <h1>Tingkat Gula Darah</h1>
           <div class="information">
-            <div class="current value"><div class="label">Saat ini <span>:</span></div> <p class="currentValue"></p></div>
-            <div class="highest value"><div class="label">Tertinggi <span>:</span></div> <p class="highestValue"></p></div>
-            <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue"></p></div>
+            <div class="current value"><div class="label">Saat ini <span>:</span></div> <p class="currentValue">No Data</p></div>
+            <div class="highest value"><div class="label">Tertinggi <span>:</span></div> <p class="highestValue">No Data</p></div>
+            <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue">No Data</p></div>
           </div>
         </div>
       </div>

@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel');
 
+// Middleware to handle JSON requests
+router.use(express.json()); // Add this middleware to parse JSON body
+
 // First route - sign page
 router.get('/', (req, res) => {
   res.render('sign');
@@ -42,13 +45,14 @@ router.get('/recipe-info', (req, res) => {
   res.render('recipe-info', { user: req.session.user });
 });
 
-// Recipe route
+
 router.get('/calc', (req, res) => {
   res.render('calc', { user: req.session.user });
 });
 
-// Handle form submission from the sign-in page
-router.post('/sign', async (req, res) => {
+
+// Handle form submission from the sign-in page (POST request)
+router.post('/', async (req, res) => {
   const { name, gender, height, weight } = req.body;
 
   const newUser = new User({
@@ -62,6 +66,7 @@ router.post('/sign', async (req, res) => {
     // Save the user data in the database
     await newUser.save();
     console.log('User saved:', newUser);
+
     // Store the user data in the session
     req.session.user = {
       name: newUser.name,
@@ -70,12 +75,12 @@ router.post('/sign', async (req, res) => {
       weight: newUser.weight
     };
 
-    // Redirect to the home page after submission
-    res.redirect('/home');
+    // Send a success response back to the frontend
+    res.json({ message: 'User data saved and session created!' });
   } catch (err) {
     // Handle any errors that occur while saving
     console.error('Error saving user:', err);
-    res.status(500).send('Internal Server Error');
+    res.status(500).json({ message: 'Error saving user data' });
   }
 });
 
