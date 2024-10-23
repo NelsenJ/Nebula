@@ -2,7 +2,7 @@
   border: 4px solid #ff9bb1;
   border-radius: 30px;
   width: 60%;
-  height: 50px;
+  /* height: 50px; */
   margin: 25px auto;
   display: flex;
   flex-direction: row;
@@ -23,6 +23,9 @@ input {
   height: 100%;
   background-color: #ff9bb1;
   border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-logo img {
@@ -30,13 +33,14 @@ input {
   margin: 2px 25%;
 }
 
-.container{
+.container {
   width: 90%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  gap: 10px;
 }
 
 .card {
@@ -52,7 +56,7 @@ input {
   margin: 1% 0;
 }
 
-.card h3{
+.card h3 {
   margin: 5px 0;
 }
 
@@ -123,4 +127,69 @@ input {
   font-size: 12px;
   font-weight: bold;
   color: #9e392b;
+}
+
+/* @media (max-width: 800px) {
+  .card {
+    width: 210px;
+    text-align: center;
+  }
+  .card img {
+    width: 180px;
+  }
+  .info p {
+    font-size: 8px;
+  }
+  .kcal img {
+    width: 10px;
+    height: auto;
+  }
+  .gula img {
+    width: 10px;
+    height: auto;
+  }
+  .view a {
+    font-size: 10px;
+  }
+} */
+
+@media (max-width: 800px) {
+  .search {
+    width: 80%;
+  }
+  .search input {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .search input {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .search input {
+    font-size: 15px;
+  }
+  .search-logo {
+    width: 60px;
+  }
+  .search-logo img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 490px) {
+  .search input {
+    font-size: 11px;
+  }
+  .search-logo img {
+    width: 25px;
+  }
+}
+@media (max-width: 350px) {
+  .search input {
+    font-size: 10px;
+  }
 }

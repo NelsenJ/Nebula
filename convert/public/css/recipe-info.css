@@ -83,7 +83,8 @@ li {
 }
 
 .bottom img {
-  width: 30px;
+  width: 40px;
+  margin-right: 5px;
 }
 
 .bottom p {
@@ -123,13 +124,73 @@ li {
   border: 2px solid black;
   margin-block: 1.5em;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: #ff9bb1; 
+  background: #ff9bb1;
   border-radius: 10px;
-  border: .1em solid #dc7070;
+  border: 0.1em solid #dc7070;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff9bb1; 
+  background: #ff9bb1;
+}
+
+@media (max-width: 1075px) {
+  .card h1 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card h1 {
+    font-size: 40px;
+  }
+  .bottom p {
+    font-size: 23px;
+  }
+}
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+  }
+  .card h1 {
+    text-align: center;
+  }
+  .card .image {
+    width: 94%;
+    /* padding: 3%; */
+    height: 200px;
+    margin-top: 20px;
+  }
+  .recipe .middle .text-box {
+    width: 100%;
+  }
+}
+@media (max-width: 580px) {
+  .card h1 {
+    font-size: 35px;
+  }
+  .bottom p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card h1 {
+    font-size: 30px;
+  }
+  .bottom p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card h1 {
+    font-size: 25px;
+  }
+  .bottom p {
+    font-size: 15px;
+  }
 }
