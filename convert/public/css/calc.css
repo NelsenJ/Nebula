@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+section.page {
+    max-width: 500px;
+    min-height: 100vh;
+    padding: 20px 0px;
+    background-color: salmon;
+}
+
+header {
+    height: 80px;
+    background-color: greenyellow;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 40px;
+    border: 2px grey solid;
+}
+
+.month-container {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.week-container {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-container button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.week-display .day-name{
+    font-size: 10px;
+}
+
+.week-display,
+#weekDisplay {
+    margin: 0 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+.day {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+}
+
+.day.name {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+
+.box-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    border: 2px grey solid;
+}
+
+.box-container.detail-calendar {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-container div {
+    display: inline-block;
+}
+
+.box-container span.box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    background-color: red;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 520px;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.month-view .week-container {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.month-view .week-display {
+    width: auto;
+    flex-wrap: wrap;
+}
