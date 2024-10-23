@@ -37,6 +37,7 @@ window.onload = function () {
 
   // Populate the chart with saved data
   updateChart(sugarHistory, weightHistory, bmiHistory, 'Day');  // Default view is 'Day'
+  calculateBMI();
 };
 
 // Initial data and labels for the chart
@@ -196,6 +197,44 @@ let myLineChart = new Chart(ctx, {
   }
 });
 
+function calculateBMI() {
+  const height = parseFloat(localStorage.getItem('height')) || 161;
+  const weight = parseFloat(localStorage.getItem('weight')) || 55.9;
+  const bmi = (weight / ((height / 100) ** 2)).toFixed(1);
+
+  // Update the BMI value and category
+  const bmiIndicator = document.getElementById('bmiIndicator');
+  const bmiValue = document.getElementById('bmiValue');
+  const bmiCategory = document.getElementById('bmiCategory');
+
+  bmiValue.innerText = bmi;
+
+  let bmiPosition = 0;  // Position in %
+  if ( bmi >= 10 && bmi < 18.5) {
+    bmiPosition = 0.925*(bmi)  // Scale 10-18.5
+    bmiCategory.innerText = "Underweight";
+    bmiCategory.style.color = "#005693";
+  } else if (bmi >= 18.5 && bmi < 25) {
+    bmiPosition = (1.08 * bmi) + (0.925*18.5) + 0.075;  // Scale 18.5-25
+    bmiCategory.innerText = "Healthy";
+    bmiCategory.style.color = "#00650d";
+  } else if (bmi >= 25 && bmi < 30) {
+    bmiPosition = 44.2 + ((bmi - 25)*3.665)
+    bmiCategory.innerText = "Overweight";
+    bmiCategory.style.color = "#a2ab00";
+  } else if (bmi >= 30 && bmi < 35) {
+    bmiPosition = 62.525 + ((bmi - 30)*3.659)
+    bmiCategory.innerText = "Obese";
+    bmiCategory.style.color = "#c07301";
+  } else if(bmi >= 35 && bmi < 40){
+    bmiPosition = 80.82 + ((bmi - 35)*3.556)
+    bmiCategory.innerText = "Severely Obese";
+    bmiCategory.style.color = "#c00101";
+  }
+
+  bmiIndicator.style.left = `${bmiPosition}%`;  // Move indicator on scale
+}
+
 // Add click event listeners for the buttons
 document.getElementById('dayButton').addEventListener('click', function () {
   updateChart(sugarHistory, weightHistory, bmiHistory, 'Day');
@@ -257,7 +296,7 @@ editButton.addEventListener('click', function () {
     let weightdiv = document.getElementById("BmiWeight")
     heightdiv.innerHTML = `${heightBmi} cm`;
     weightdiv.innerHTML = `${weightBmi} kg`;
-    
+    calculateBMI();
   } else {
     // Change contenteditable to true (edit mode)
     heightInfo.setAttribute('contenteditable', 'true');
