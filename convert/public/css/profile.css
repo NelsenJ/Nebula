@@ -155,7 +155,7 @@ div.input div.option div.choose{
   width: 160px;
 }
 
-div.gender div.option div.choose input[type="checkbox"]{
+div.gender div.option div.choose input[type="radio"]{
   appearance: none;
   -webkit-appearance: none;
   height: 14px;
@@ -167,7 +167,7 @@ div.gender div.option div.choose input[type="checkbox"]{
   transition: 0.05s ease;
 }
 
-div.gender div.option div.choose input[type="checkbox"]:checked{
+div.gender div.option div.choose input[type="radio"]:checked{
   background-color: var(--checked);
 }
 
@@ -178,6 +178,22 @@ div.input.name input{
 
 div.input.date input{
   width: 100%
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+div.input.date div.inputed{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.input.date i{
+  color: #fff;
+  position: absolute;
 }
 
 div.measure{
