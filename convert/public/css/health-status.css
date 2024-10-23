@@ -131,10 +131,16 @@ div.container-health div.left-health div.bottom-health div.information div.info 
 }
 
 div.infos{
-    text-decoration: underline;
     color: #00650d;
+    display: flex;
+    flex-direction: row;
+    text-decoration: underline;
 }
 
+p.invis{
+    color: #dce683;
+    font-weight: 100;
+}
 
 div.info div.text{
     width: 43%;

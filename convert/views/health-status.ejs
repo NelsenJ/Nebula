@@ -48,8 +48,8 @@
                 <p class="rangeText" style="color: #00650d;">Berat Badan yang Sehat</p>
               </div>
               <div class="bmi-informations">
-                <p>Berat Badan: <span>55.9 kg</span></p>
-                <p>Tinggi Badan: <span>161 cm</span></p>
+                <p>Berat Badan: <span id="BmiWeight">55.9 kg</span></p>
+                <p>Tinggi Badan: <span id="BmiHeight">161 cm</span></p>
               </div>
 
             </div>
@@ -64,15 +64,15 @@
           <div class="information">
             <div class="info">
               <div class="text"><p>Tinggi Badan </p><span>:</span></div>
-              <div class="infos" contenteditable="false" id="heightInfo">161.0 cm</div>
+              <div class="infos"><div contenteditable="false" id="heightInfo">161.0</div><p class="invis">i</p><p>cm</p></div>
             </div>
             <div class="info">
               <div class="text"><p>Berat Badan </p><span>:</span></div>
-              <div class="infos" contenteditable="false" id="weightInfo">55.9 kg</div>
+              <div class="infos"><div contenteditable="false" id="weightInfo">55.9</div><p class="invis">i</p><p> kg</p></div>
             </div>
             <div class="info">
               <div class="text"><p>Kadar Gula Darah </p><span>:</span></div>
-              <div class="infos" contenteditable="false" id="sugarInfo">50 mg/dl</div>
+              <div class="infos"><div contenteditable="false" id="sugarInfo">50</div><p class="invis">i</p><p> mg/dl</p></div>
             </div>
           </div>
         </div>
@@ -83,24 +83,18 @@
           <canvas id="myLineChart"></canvas>
         </div>
       
-        <!-- Dropdown pilihan interval waktu -->
-        <div class="interval-selector">
-          <label for="timeInterval">Pilih Interval Waktu:</label>
-          <select id="timeInterval">
-            <option value="perDetik">Per Detik</option>
-            <option value="perMenit">Per Menit</option>
-            <option value="perJam">Per Jam</option>
-            <option value="perHari">Per Hari</option>
-            <option value="perBulan">Per Bulan</option>
-          </select>
+        <div>
+            <button id="dayButton">Day</button>
+            <button id="weekButton">Week</button>
+            <button id="monthButton">Month</button>
         </div>
       
         <div class="text">
           <h1>Tingkat Gula Darah</h1>
           <div class="information">
-            <div class="current value"><div class="label">Saat ini <span>:</span></div> <p class="currentValue"></p></div>
-            <div class="highest value"><div class="label">Tertinggi <span>:</span></div> <p class="highestValue"></p></div>
-            <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue"></p></div>
+            <div class="current value"><div class="label">Saat ini <span>:</span></div> <p class="currentValue">-</p></div>
+            <div class="highest value"><div class="label">Tertinggi <span>:</span></div> <p class="highestValue">-</p></div>
+            <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue">-</p></div>
           </div>
         </div>
       </div>
