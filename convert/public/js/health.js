@@ -77,16 +77,24 @@ function updateChart(sugarHistory, weightHistory, bmiHistory, viewType) {
   myLineChart.update();
 
   // **Recalculate the highest, lowest, and current values for sugar**
-  const allSugarData = sugarHistory.map(entry => entry.value);
-  const highestSugarValue = Math.max(...allSugarData);
-  const lowestSugarValue = Math.min(...allSugarData);
-  const currentSugarValue = allSugarData[allSugarData.length - 1];
+  if (sugarHistory.length > 0) {
+    const allSugarData = sugarHistory.map(entry => entry.value || 0); // Default to 0 if entry.value is missing or falsy
+    const highestSugarValue = Math.max(...allSugarData);
+    const lowestSugarValue = Math.min(...allSugarData);
+    const currentSugarValue = allSugarData[allSugarData.length - 1];
 
-  // **Update the HTML for sugar**
-  document.querySelector('.highestValue').textContent = `${highestSugarValue} mg/dl`;
-  document.querySelector('.lowestValue').textContent = `${lowestSugarValue} mg/dl`;
-  document.querySelector('.currentValue').textContent = `${currentSugarValue} mg/dl`;
+    // **Update the HTML for sugar**
+    document.querySelector('.highestValue').textContent = `${highestSugarValue} mg/dl`;
+    document.querySelector('.lowestValue').textContent = `${lowestSugarValue} mg/dl`;
+    document.querySelector('.currentValue').textContent = `${currentSugarValue} mg/dl`;
+  } else {
+    // Set default values if no data is available
+    document.querySelector('.highestValue').textContent = "No Data";
+    document.querySelector('.lowestValue').textContent = "No Data";
+    document.querySelector('.currentValue').textContent = "No Data";
+  }
 }
+
 
 
 // Group data by the selected time interval and calculate the average for each group
