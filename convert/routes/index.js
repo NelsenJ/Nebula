@@ -40,6 +40,11 @@ router.get('/recipes', (req, res) => {
   res.render('recipes', { user: req.session.user });
 });
 
+// Recipe-info route
+router.get('/recipe-info', (req, res) => {
+  res.render('recipe-info', { user: req.session.user });
+});
+
 // Calculator route
 router.get('/calc', (req, res) => {
   res.render('calc', { user: req.session.user });
