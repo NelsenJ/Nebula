@@ -1,6 +1,5 @@
 const ctx = document.getElementById('myLineChart').getContext('2d');
 
-// Load saved data from localStorage
 window.onload = function () {
   const savedHeight = localStorage.getItem('height');
   const savedWeight = localStorage.getItem('weight');
@@ -35,21 +34,17 @@ window.onload = function () {
     sugarInfo.textContent = savedSugar;
   }
 
-  // Populate the chart with saved data
-  updateChart(sugarHistory, weightHistory, bmiHistory, 'Day');  // Default view is 'Day'
+  updateChart(sugarHistory, weightHistory, bmiHistory, 'Day');
   calculateBMI();
 };
 
-// Initial data and labels for the chart
 let sugarHistory = JSON.parse(localStorage.getItem('sugarHistory')) || [];
 let weightHistory = JSON.parse(localStorage.getItem('weightHistory')) || [];
 let bmiHistory = JSON.parse(localStorage.getItem('bmiHistory')) || [];
 
-// Update the chart with new data and recalculate the highest, lowest, and current values
 function updateChart(sugarHistory, weightHistory, bmiHistory, viewType) {
   let processedSugarData, processedWeightData, processedBmiData;
 
-  // Filter and group data by selected time interval
   if (viewType === 'Day') {
     processedSugarData = groupDataByInterval(sugarHistory, 'perMenit');
     processedWeightData = groupDataByInterval(weightHistory, 'perMenit');
@@ -78,26 +73,23 @@ function updateChart(sugarHistory, weightHistory, bmiHistory, viewType) {
   const weightData = processedWeightData.map(item => item.value);
   const bmiData = processedBmiData.map(item => item.value);
 
-  // **Update chart labels and data for all datasets**
   myLineChart.data.labels = labels;
   myLineChart.data.datasets[0].data = sugarData;
   myLineChart.data.datasets[1].data = weightData;
   myLineChart.data.datasets[2].data = bmiData;
   myLineChart.update();
 
-  // **Recalculate the highest, lowest, and current values for sugar**
+
   if (sugarHistory.length > 0) {
-    const allSugarData = sugarHistory.map(entry => entry.value || 0); // Default to 0 if entry.value is missing or falsy
+    const allSugarData = sugarHistory.map(entry => entry.value || 0);
     const highestSugarValue = Math.max(...allSugarData);
     const lowestSugarValue = Math.min(...allSugarData);
     const currentSugarValue = allSugarData[allSugarData.length - 1];
 
-    // **Update the HTML for sugar**
     document.querySelector('.highestValue').textContent = `${highestSugarValue} mg/dl`;
     document.querySelector('.lowestValue').textContent = `${lowestSugarValue} mg/dl`;
     document.querySelector('.currentValue').textContent = `${currentSugarValue} mg/dl`;
   } else {
-    // Set default values if no data is available
     document.querySelector('.highestValue').textContent = "No Data";
     document.querySelector('.lowestValue').textContent = "No Data";
     document.querySelector('.currentValue').textContent = "No Data";
@@ -106,7 +98,6 @@ function updateChart(sugarHistory, weightHistory, bmiHistory, viewType) {
 
 
 
-// Group data by the selected time interval and calculate the average for each group
 function groupDataByInterval(dataHistory, interval) {
   let groupedData = {};
 
@@ -133,7 +124,6 @@ function groupDataByInterval(dataHistory, interval) {
     groupedData[label].push(entry.value);
   });
 
-  // Calculate the average for each time group
   let result = Object.keys(groupedData).map(label => {
     let sum = groupedData[label].reduce((a, b) => a + b, 0);
     let average = sum / groupedData[label].length;
@@ -143,36 +133,35 @@ function groupDataByInterval(dataHistory, interval) {
   return result;
 }
 
-// Create the chart with three datasets (sugar, weight, BMI)
 let myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: [],  // X-axis labels will be updated dynamically
+    labels: [],
     datasets: [{
       label: 'Kadar Gula Darah',
-      data: [],  // Y-axis data points for sugar
-      borderColor: 'rgba(255, 99, 132, 1)',  // Red line color
-      borderWidth: 2.5,                 // Line thickness
-      tension: 0,                       // Straight line
-      pointBackgroundColor: 'rgba(255, 99, 132, 1)',  // Red color for points
-      pointRadius: 2,                   // Point size
+      data: [],
+      borderColor: 'rgba(255, 99, 132, 1)',
+      borderWidth: 2.5,                 
+      tension: 0,                       
+      pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+      pointRadius: 2,                   
     },
     {
       label: 'Berat Badan',
-      data: [],  // Y-axis data points for weight
-      borderColor: 'rgba(54, 162, 235, 1)',  // Blue line color
+      data: [],
+      borderColor: 'rgba(54, 162, 235, 1)',
       borderWidth: 2.5,
       tension: 0,
-      pointBackgroundColor: 'rgba(54, 162, 235, 1)',  // Blue color for points
+      pointBackgroundColor: 'rgba(54, 162, 235, 1)',
       pointRadius: 2,
     },
     {
       label: 'BMI',
-      data: [],  // Y-axis data points for BMI
-      borderColor: 'rgba(75, 192, 192, 1)',  // Green line color
+      data: [],
+      borderColor: 'rgba(75, 192, 192, 1)',
       borderWidth: 2.5,
       tension: 0,
-      pointBackgroundColor: 'rgba(75, 192, 192, 1)',  // Green color for points
+      pointBackgroundColor: 'rgba(75, 192, 192, 1)',
       pointRadius: 2,
     }]
   },
@@ -182,7 +171,7 @@ let myLineChart = new Chart(ctx, {
     scales: {
       x: {
         grid: {
-          display: false,  // Hide vertical grid lines
+          display: false,
         },
         ticks: {
           color: '#333',
@@ -190,7 +179,7 @@ let myLineChart = new Chart(ctx, {
       },
       y: {
         grid: {
-          color: 'rgba(0, 0, 0, 0.1)',  // Light horizontal grid lines
+          color: 'rgba(0, 0, 0, 0.1)',
         },
         ticks: {
           color: '#444',
@@ -200,8 +189,8 @@ let myLineChart = new Chart(ctx, {
     },
     plugins: {
       legend: {
-        position: 'bottom', // Moves the legend below the chart
-        display: true,  // Show the legend
+        position: 'bottom',
+        display: true,
       }
     },
     layout: {
@@ -220,20 +209,19 @@ function calculateBMI() {
   const weight = parseFloat(localStorage.getItem('weight')) || 55.9;
   const bmi = (weight / ((height / 100) ** 2)).toFixed(1);
 
-  // Update the BMI value and category
   const bmiIndicator = document.getElementById('bmiIndicator');
   const bmiValue = document.getElementById('bmiValue');
   const bmiCategory = document.getElementById('bmiCategory');
 
   bmiValue.innerText = bmi;
 
-  let bmiPosition = 0;  // Position in %
+  let bmiPosition = 0;
   if ( bmi >= 10 && bmi < 18.5) {
-    bmiPosition = 0.925*(bmi)  // Scale 10-18.5
+    bmiPosition = 0.925*(bmi)
     bmiCategory.innerText = "Berat badan kamu kurang dari rentang ideal";
     bmiCategory.style.color = "#005693";
   } else if (bmi >= 18.5 && bmi < 25) {
-    bmiPosition = (1.08 * bmi) + (0.925*18.5) + 0.075;  // Scale 18.5-25
+    bmiPosition = (1.08 * bmi) + (0.925*18.5) + 0.075;
     bmiCategory.innerText = "Kamu memiliki berat badan yang sesuai.";
     bmiCategory.style.color = "#00650d";
   } else if (bmi >= 25 && bmi < 30) {
@@ -261,14 +249,13 @@ function calculateBMI() {
     bmiCategory.style.color = "#000";
   }
 
-  bmiIndicator.style.left = `${bmiPosition}%`;  // Move indicator on scale
+  bmiIndicator.style.left = `${bmiPosition}%`;
 }
 
 const dayButton = document.getElementById('dayButton');
 const weekButton = document.getElementById('weekButton');
 const monthButton = document.getElementById('monthButton');
 
-// Add click event listeners for the buttons
 document.getElementById('dayButton').addEventListener('click', function () {
   updateChart(sugarHistory, weightHistory, bmiHistory, 'Day');
 });
@@ -281,7 +268,6 @@ document.getElementById('monthButton').addEventListener('click', function () {
   updateChart(sugarHistory, weightHistory, bmiHistory, 'Month');
 });
 
-// Add click event listener to toggle between edit and save
 const editButton = document.getElementById('editButton');
 const heightInfo = document.getElementById('heightInfo');
 const weightInfo = document.getElementById('weightInfo');
@@ -291,14 +277,12 @@ editButton.addEventListener('click', function () {
   const isEditable = heightInfo.getAttribute('contenteditable') === 'true';
 
   if (isEditable) {
-    // Change contenteditable to false (save mode)
     heightInfo.setAttribute('contenteditable', 'false');
     weightInfo.setAttribute('contenteditable', 'false');
     sugarInfo.setAttribute('contenteditable', 'false');
     editButton.innerText = 'Edit';
     editButton.style.color ='Red';
 
-    // Save the data to localStorage
     const currentSugar = parseFloat(sugarInfo.textContent);
     const currentWeight = parseFloat(weightInfo.textContent);
     const currentHeight = parseFloat(heightInfo.textContent);
@@ -308,10 +292,8 @@ editButton.addEventListener('click', function () {
     localStorage.setItem('weight', weightInfo.textContent);
     localStorage.setItem('sugar', sugarInfo.textContent);
 
-    // **Calculate BMI**
     const bmi = currentWeight / ((currentHeight / 100) ** 2);
 
-    // Add sugar, weight, and BMI to history arrays
     sugarHistory.push({ value: currentSugar, time: currentTime });
     weightHistory.push({ value: currentWeight, time: currentTime });
     bmiHistory.push({ value: bmi, time: currentTime });
@@ -320,7 +302,6 @@ editButton.addEventListener('click', function () {
     localStorage.setItem('weightHistory', JSON.stringify(weightHistory));
     localStorage.setItem('bmiHistory', JSON.stringify(bmiHistory));
 
-    // **Update the chart with the new data**
     updateChart(sugarHistory, weightHistory, bmiHistory, 'Day');
 
     alert('Data saved to localStorage and chart updated!');
@@ -332,7 +313,6 @@ editButton.addEventListener('click', function () {
     weightdiv.innerHTML = `${weightBmi} kg`;
     calculateBMI();
   } else {
-    // Change contenteditable to true (edit mode)
     heightInfo.setAttribute('contenteditable', 'true');
     weightInfo.setAttribute('contenteditable', 'true');
     sugarInfo.setAttribute('contenteditable', 'true');
