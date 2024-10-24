@@ -54,14 +54,23 @@ function updateChart(sugarHistory, weightHistory, bmiHistory, viewType) {
     processedSugarData = groupDataByInterval(sugarHistory, 'perMenit');
     processedWeightData = groupDataByInterval(weightHistory, 'perMenit');
     processedBmiData = groupDataByInterval(bmiHistory, 'perMenit');
+    dayButton.style.backgroundColor = '#ffc6a7'
+    weekButton.style.backgroundColor = '#fffaf0'
+    monthButton.style.backgroundColor = '#fffaf0'
   } else if (viewType === 'Week') {
     processedSugarData = groupDataByInterval(sugarHistory, 'perHari');
     processedWeightData = groupDataByInterval(weightHistory, 'perHari');
     processedBmiData = groupDataByInterval(bmiHistory, 'perHari');
+    dayButton.style.backgroundColor = '#fffaf0'
+    weekButton.style.backgroundColor = '#ffc6a7'
+    monthButton.style.backgroundColor = '#fffaf0'
   } else if (viewType === 'Month') {
     processedSugarData = groupDataByInterval(sugarHistory, 'perHari');
     processedWeightData = groupDataByInterval(weightHistory, 'perHari');
     processedBmiData = groupDataByInterval(bmiHistory, 'perHari');
+    dayButton.style.backgroundColor = '#fffaf0'
+    weekButton.style.backgroundColor = '#fffaf0'
+    monthButton.style.backgroundColor = '#ffc6a7'
   }
 
   const labels = processedSugarData.map(item => item.label);
@@ -191,6 +200,7 @@ let myLineChart = new Chart(ctx, {
     },
     plugins: {
       legend: {
+        position: 'bottom', // Moves the legend below the chart
         display: true,  // Show the legend
       }
     },
@@ -243,6 +253,10 @@ function calculateBMI() {
   bmiIndicator.style.left = `${bmiPosition}%`;  // Move indicator on scale
 }
 
+const dayButton = document.getElementById('dayButton');
+const weekButton = document.getElementById('weekButton');
+const monthButton = document.getElementById('monthButton');
+
 // Add click event listeners for the buttons
 document.getElementById('dayButton').addEventListener('click', function () {
   updateChart(sugarHistory, weightHistory, bmiHistory, 'Day');
@@ -271,6 +285,7 @@ editButton.addEventListener('click', function () {
     weightInfo.setAttribute('contenteditable', 'false');
     sugarInfo.setAttribute('contenteditable', 'false');
     editButton.innerText = 'Edit';
+    editButton.style.color ='Red';
 
     // Save the data to localStorage
     const currentSugar = parseFloat(sugarInfo.textContent);
@@ -311,6 +326,7 @@ editButton.addEventListener('click', function () {
     weightInfo.setAttribute('contenteditable', 'true');
     sugarInfo.setAttribute('contenteditable', 'true');
     editButton.innerText = 'Save';
+    editButton.style.color ='#00b007';
   }
 });
 

@@ -9,21 +9,24 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 95px;
+    width: 90%;
   }
   
   .title h1 {
     margin-bottom: 0px;
-    color: #696de9;
+    color: #ff2149;
+    font-family: "Noto Serif", serif;
   }
   
   .title p {
-    margin-top: 5px;
+    margin-bottom: 5px;
   }
   
   .text{
     margin: 10px 0px;
-    width: 80%;
-    height: 60vh;
+    width: 70%;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,6 +50,7 @@
     padding: 10px 20px;
     font-size: 25px;
     margin: 20px 0;
+    cursor: pointer;
   }
   
   ::-webkit-scrollbar {
@@ -70,10 +74,25 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #ff9bb1; 
   }
-  
+
+  @media screen and (max-width: 730px) {
+    .title h1 {
+      font-size: 28px;
+    }
+  }
+  @media screen and (max-width: 730px) {
+    .title h1 {
+      font-size: 26px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .title h1 {
+      font-size: 24px;
+    }
+  }
   @media screen and (max-width: 470px) {
     .title h1 {
-      font-size: 25px;
+      font-size: 23px;
     }
   }
   @media screen and (max-width: 360px) {

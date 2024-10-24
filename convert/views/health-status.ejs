@@ -56,7 +56,7 @@
         <div class="bottom-health">
           <div class="topInfo">
             <h1>Data Diri :</h1>
-            <h1 class="edit" id="editButton">Edit</h1>
+            <button class="edit" id="editButton">Edit</button>
           </div>
           <div class="information">
             <div class="info">
@@ -80,20 +80,26 @@
           <canvas id="myLineChart"></canvas>
         </div>
 
-        <div>
-            <button id="dayButton">Day</button>
-            <button id="weekButton">Week</button>
-            <button id="monthButton">Month</button>
+        <div class="text-right">
+
+          <div class="interval">
+            <button id="dayButton">Per Hari</button>
+            <button id="weekButton">Per Minggu</button>
+            <button id="monthButton">Per Bulan</button>
+          </div>
+          
+          <div class="text">
+            <h1>Tingkat Gula Darah</h1>
+            <div class="information">
+              <div class="current value"><div class="label">Saat ini <span>:</span></div> <p class="currentValue">No Data</p></div>
+              <div class="highest value"><div class="label">Tertinggi <span>:</span></div> <p class="highestValue">No Data</p></div>
+              <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue">No Data</p></div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="text">
-          <h1>Tingkat Gula Darah</h1>
-          <div class="information">
-            <div class="current value"><div class="label">Saat ini <span>:</span></div> <p class="currentValue">No Data</p></div>
-            <div class="highest value"><div class="label">Tertinggi <span>:</span></div> <p class="highestValue">No Data</p></div>
-            <div class="lowest value"><div class="label">Terendah <span>:</span></div> <p class="lowestValue">No Data</p></div>
-          </div>
-        </div>
+
       </div>
     </div>
 </body>
