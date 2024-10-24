@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const storedGender = localStorage.getItem('gender');
     const storedHeight = localStorage.getItem('height');
     const storedWeight = localStorage.getItem('weight');
+    const storedDate = localStorage.getItem('date');
     const saveBtn = document.getElementById('save-btn');
     const inputs = document.querySelectorAll('input');
     const popup = document.getElementById('popup');
     const noBtn = document.getElementById('noBtn');
     const yesBtn = document.getElementById('yesBtn');
+    const dateInput = document.getElementById('birthDate')
 
     if (storedName) {
         document.getElementById('User').value = storedName;
@@ -27,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('weight').value = storedWeight;
     }
 
+    if (storedDate){
+        document.getElementById('birthDate').value = storedDate;
+    }
+
     inputs.forEach(input => {
         input.addEventListener('input', function() {
             console.log('Input changed, showing save button');
@@ -39,11 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const gender = document.querySelector('input[name="gender"]:checked').value;
         const height = document.getElementById('height').value;
         const weight = document.getElementById('weight').value;
-
+        const date = document.getElementById('birthDate').value;
         localStorage.setItem('name', name);
         localStorage.setItem('gender', gender);
         localStorage.setItem('height', height);
         localStorage.setItem('weight', weight);
+        localStorage.setItem('date', date)
 
         document.querySelector('.save').style.display = 'none';
 
