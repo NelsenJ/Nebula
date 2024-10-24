@@ -40,6 +40,7 @@
 
 div.containerall{
     padding: 30px;
+    width: 95%;
 }
 
 div.button{
@@ -177,23 +178,30 @@ div.input.name input{
 }
 
 div.input.date input{
-  width: 100%
+  width: 100%;
+  z-index: 100;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
+  z-index: 100;
 }
+
+
 
 div.input.date div.inputed{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 div.input.date i{
   color: #fff;
+  z-index: 99;
   position: absolute;
+  right: 0.2rem;
 }
 
 div.measure{
@@ -215,6 +223,7 @@ div.measure p{
   color: var(--label);
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 div.isi div.inputbox{
@@ -247,7 +256,7 @@ div.isi input{
 
 div.delete{
   position: fixed;
-  bottom: 30px;
+  bottom: 15px;
   right: 30px;
 }
 
@@ -265,7 +274,7 @@ div.delete button{
   gap: 9px;
   color: var(--font);
   font-family: var(--poppins);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.3px;
 }
@@ -273,6 +282,101 @@ div.delete button{
 div.delete button i{
   font-size: 20px;
   font-weight: normal;
+}
+
+div.save{
+  position: fixed;
+  bottom: 15px;
+  left: 30px;
+  display: none;
+}
+
+div.save button{
+  background-color: #728aac;
+  border: none;
+  outline: none;
+  padding: 7px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 19px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  color: var(--font);
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+div.popup {
+  font-family: var(--poppins);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.popup-content {
+  background-color: #FCFFFF;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+div.popup-content p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+div.popup-content button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: var(--poppins);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0 10px;
+}
+
+div.popup-content button#noBtn {
+  background-color: #F44336; /* Red for "No" button */
+  color: #ffffff; /* White text for contrast */
+}
+
+div.popup-content button#yesBtn {
+  background-color: #4CAF50; /* Green for "Yes" button */
+  color: #ffffff;
+}
+
+div.popup-content button:hover {
+  background-color: #45a049; /* Darker green on hover for "Yes" */
+}
+
+div.popup-content button#noBtn:hover {
+  background-color: #d32f2f; /* Darker red on hover for "No" */
+}
+
+div.popup-content div.option{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
 }
 
 @media (min-width: 700px) {
@@ -319,4 +423,35 @@ div.delete button i{
     justify-content: space-between;
     width: 280px;
   }
+ 
+  div.bottombutton{
+    display: flex;
+    width: 564px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 50px;
+  }
+
+  div.delete{
+    position: relative;
+  }
+
+  div.save{
+    position: relative;
+  }
+}
+@media (max-width: 400px) {
+  .container label {
+    font-size: 14px;
+  }
+  div.measure p{
+    font-size: 17px;
+  }
+}
+
+div.popup.hidden {
+  display: none;
 }

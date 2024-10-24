@@ -230,24 +230,35 @@ function calculateBMI() {
   let bmiPosition = 0;  // Position in %
   if ( bmi >= 10 && bmi < 18.5) {
     bmiPosition = 0.925*(bmi)  // Scale 10-18.5
-    bmiCategory.innerText = "Underweight";
+    bmiCategory.innerText = "Berat badan kamu kurang dari rentang ideal";
     bmiCategory.style.color = "#005693";
   } else if (bmi >= 18.5 && bmi < 25) {
     bmiPosition = (1.08 * bmi) + (0.925*18.5) + 0.075;  // Scale 18.5-25
-    bmiCategory.innerText = "Healthy";
+    bmiCategory.innerText = "Kamu memiliki berat badan yang sesuai.";
     bmiCategory.style.color = "#00650d";
   } else if (bmi >= 25 && bmi < 30) {
     bmiPosition = 44.2 + ((bmi - 25)*3.665)
-    bmiCategory.innerText = "Overweight";
+    bmiCategory.innerText = "Berat badan kamu sedikit melebihi rentang ideal.";
     bmiCategory.style.color = "#a2ab00";
   } else if (bmi >= 30 && bmi < 35) {
     bmiPosition = 62.525 + ((bmi - 30)*3.659)
-    bmiCategory.innerText = "Obese";
+    bmiCategory.innerText = "Berat badan kamu melebihi rentang ideal.";
     bmiCategory.style.color = "#c07301";
   } else if(bmi >= 35 && bmi < 40){
     bmiPosition = 80.82 + ((bmi - 35)*3.556)
-    bmiCategory.innerText = "Severely Obese";
+    bmiCategory.innerText = "Berat badan kamu jauh melebihi rentang ideal.";
     bmiCategory.style.color = "#c00101";
+  }else if(bmi < 10 && bmi > 0){
+    bmiCategory.innerText = "BMI anda sangat rendah";
+    bmiCategory.style.color = "#005693";
+  }else if(bmi > 40 && bmi < 100){
+    bmiPosition = 100;
+    bmiCategory.innerText = "Berat badan kamu dalam kategori obesitas parah";
+    bmiCategory.style.color = "#c00101";
+  }else{
+    bmiIndicator.style.display = "none";
+    bmiCategory.innerText = "BMI tidak valid";
+    bmiCategory.style.color = "#000";
   }
 
   bmiIndicator.style.left = `${bmiPosition}%`;  // Move indicator on scale
@@ -328,5 +339,6 @@ editButton.addEventListener('click', function () {
     editButton.innerText = 'Save';
     editButton.style.color ='#00b007';
   }
+  calculateBMI();
 });
 
