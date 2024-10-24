@@ -16,6 +16,7 @@
   --label: #78D1CC;
   --font: #fff;
   --delete: #ED451D;
+  --delete-hover: #ed461d8f;
   --changename: #919191;
   --input-checkbox: #FFC8DD;
   --border: #000;
@@ -258,6 +259,7 @@ div.delete{
   position: fixed;
   bottom: 15px;
   right: 30px;
+  cursor: pointer;
 }
 
 div.delete button{
@@ -277,6 +279,13 @@ div.delete button{
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.3px;
+  cursor: pointer;
+}
+
+div.delete button:hover{
+  background-color: var(--delete);
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 div.delete button i{
@@ -289,6 +298,7 @@ div.save{
   bottom: 15px;
   left: 30px;
   display: none;
+  cursor: pointer;
 }
 
 div.save button{
@@ -308,6 +318,11 @@ div.save button{
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.3px;
+  cursor: pointer;  
+}
+
+div.save button:hover{
+  opacity: 0.9;
 }
 
 div.popup {
@@ -455,3 +470,92 @@ div.popup-content div.option{
 div.popup.hidden {
   display: none;
 }
+
+p#change-name:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color: #FCFFFF;
+  --button: #F9CA9E;
+  --button-arrowc: #fff;
+  --input: #FF9BB1;
+  --label: #78D1CC;
+  --font: #fff;
+  --delete: #ED451D;
+  --changename: #919191;
+  --input-checkbox: #FFC8DD;
+  --border: #000;
+  --checked:#78D1CC;
+  --opensans: "Open Sans", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+.containerall{
+  padding: 30px;
+  width: 95%;
+}
+
+.button{
+  position: absolute;
+}
+
+.button button{
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--button);
+  padding: 10px;
+  color: var(--button-arrowc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.arrow-left {
+  background-image: url(../images/profile/arrow.png);
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  background-position-x: -1px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.avatar{
+  width: 120px;
+  height: 120px;
+  background-color: black;
+  border-radius: 50%;
+  transition: 0.1s ease;
+  background-image: none;
+  background-size: 125% 125%;
+  background-position: center;
+}
+
+#change-avatar{
+  font-family: var(--poppins);
+  color: var(--changename);
+  font-size: 21px;
+  font-weight: bold;
+}
+
+#change-avatar:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
