@@ -14,7 +14,6 @@
   font-size: 50px;
 }
 
-
 .recipe {
   padding: 3%;
 }
@@ -45,14 +44,7 @@
   background-size: cover;
 }
 
-
-.image {
-  width: 50%;
-  border-radius: 20px;
-  border: 4px solid #f8a29e;
-}
-
-.image img{
+.image img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -68,7 +60,6 @@
   border: 4px solid #f8a29e;
   padding: 10px;
 }
-
 
 .text-box h3 {
   font-size: 20px;
@@ -89,11 +80,6 @@ li {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  
-.bottom {
-  width: 40%;
-  display: flex;
-  flex-direction: row;
 }
 
 .bottom img {
@@ -101,9 +87,8 @@ li {
   margin-right: 5px;
 }
 
-
 .bottom p {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .kcal {
@@ -209,4 +194,3 @@ li {
     font-size: 15px;
   }
 }
-

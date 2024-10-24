@@ -1,19 +1,16 @@
 document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
-    // Get form values
     const name = document.getElementById('User').value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
     const height = document.getElementById('height').value;
     const weight = document.getElementById('weight').value;
 
-    // Store the values in localStorage
     localStorage.setItem('name', name);
     localStorage.setItem('gender', gender);
     localStorage.setItem('height', height);
     localStorage.setItem('weight', weight);
 
-    // Send data to the server
     fetch('/', {
         method: 'POST',
         headers: {
@@ -30,7 +27,6 @@ document.querySelector('form').addEventListener('submit', function(event) {
     .then(data => {
         console.log('Success:', data);
         alert('Data successfully sent to MongoDB and session created!');
-        // Redirect to the home page after successful submission
         window.location.href = '/home';
     })
     .catch((error) => {
@@ -39,7 +35,6 @@ document.querySelector('form').addEventListener('submit', function(event) {
     });
 });
 
-// Preload stored data from localStorage on page load
 window.addEventListener('DOMContentLoaded', () => {
     const storedName = localStorage.getItem('name');
     const storedGender = localStorage.getItem('gender');
