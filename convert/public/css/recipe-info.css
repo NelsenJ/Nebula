@@ -1,6 +1,6 @@
 .card {
   width: 90%;
-  height: 80vh;
+  height: auto; /* Change height to auto so it adjusts based on content */
   background-color: #ffc8dd;
   margin: 25px auto;
   border: 4px solid #f8a29e;
@@ -8,10 +8,6 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-}
-
-.card h1 {
-  font-size: 50px;
 }
 
 .recipe {
@@ -36,26 +32,21 @@
 
 .image {
   width: 1000px;
+  height: auto; /* Ensure height adapts to the content */
   border-radius: 20px;
   border: 4px solid #f8a29e;
-  background-image: url(/images/recipe/cookie.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
 }
 
 .text-box {
   margin: 20px 0;
   background-color: #ffe1d1;
   width: 93%;
-  height: 45vh;
-  overflow-y: scroll;
+  min-height: 45vh; /* Set a minimum height to prevent collapsing */
+  max-height: 50vh; /* Prevent the box from growing too large */
+  overflow-y: auto; /* Ensure the content scrolls if it gets too long */
   border-radius: 20px;
   border: 4px solid #f8a29e;
   padding: 10px;
@@ -66,16 +57,14 @@
 }
 
 ul {
-  /* list-style-type: circle !important; Ensures circles are used for list items */
-  padding-left: 30px; /* Adds space for bullets to show */
+  padding-left: 30px;
 }
 
 li {
-  margin-bottom: 5px; /* Adds space between list items */
+  margin-bottom: 5px;
 }
 
 .card .bottom {
-  /* background-color: white; */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -113,84 +102,37 @@ li {
   align-items: center;
 }
 
-::-webkit-scrollbar {
+.text-box::-webkit-scrollbar {
   width: 15px;
-  margin-right: 5px;
 }
 
-::-webkit-scrollbar-track {
+.text-box::-webkit-scrollbar-track {
   background-color: #ce8985;
   border-radius: 10px;
   border: 2px solid black;
   margin-block: 1.5em;
 }
 
-::-webkit-scrollbar-thumb {
+.text-box::-webkit-scrollbar-thumb {
   background: #ff9bb1;
   border-radius: 10px;
   border: 0.1em solid #dc7070;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #ff9bb1;
-}
-
-@media (max-width: 1075px) {
-  .card h1 {
-    font-size: 45px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .card h1 {
-    font-size: 40px;
-  }
-  .bottom p {
-    font-size: 23px;
-  }
-}
 @media (max-width: 900px) {
   .card {
     flex-direction: column;
     height: fit-content;
     align-items: center;
   }
-  .card h1 {
-    text-align: center;
-  }
-  .card .image {
+
+  .image {
     width: 94%;
-    /* padding: 3%; */
     height: 200px;
     margin-top: 20px;
   }
-  .recipe .middle .text-box {
+
+  .text-box {
     width: 100%;
-  }
-}
-@media (max-width: 580px) {
-  .card h1 {
-    font-size: 35px;
-  }
-  .bottom p {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .card h1 {
-    font-size: 30px;
-  }
-  .bottom p {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 450px) {
-  .card h1 {
-    font-size: 25px;
-  }
-  .bottom p {
-    font-size: 15px;
   }
 }

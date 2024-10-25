@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= recipe.title %></title>
+  <title>Resep Makanan</title>
   <link rel="stylesheet" href="/css/recipe-info.css"/>
   <link rel="stylesheet" href="/css/global.css"/> 
 </head>
@@ -14,7 +14,7 @@
   <div class="card">
     <div class="image" style="background-image: url('<%= recipe.image %>');">
     </div>
-    
+
     <div class="recipe">
 
       <div class="top">
@@ -31,6 +31,7 @@
                 <li><%= ingredient %></li>
               <% }); %>
             </ul>
+
           </div>
 
           <div class="cara">
@@ -60,3 +61,4 @@
   <script src="/js/recipe.js"></script>
 </body>
 </html>
+
