@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel');
-const recipes = require('../data/recipes.json'); // Load the JSON data
+const recipes = require('../data/recipes.json');
 
 router.use(express.json());
 
@@ -29,20 +29,19 @@ router.get('/health-stats', (req, res) => {
   res.render('health-status', { user: req.session.user });
 });
 
-// Update the /recipes route to pass recipe data to the EJS template
 router.get('/recipes', (req, res) => {
-  res.render('recipes', { user: req.session.user, recipes }); // Pass the JSON data
+  res.render('recipes', { user: req.session.user, recipes });
 });
 
 router.get('/recipe-info/:id', (req, res) => {
   const recipeId = req.params.id;
-  const recipe = recipes.find(r => r.id === recipeId); // Find the recipe by ID
+  const recipe = recipes.find(r => r.id === recipeId);
 
   if (!recipe) {
     return res.status(404).send("Recipe not found");
   }
 
-  res.render('recipe-info', { user: req.session.user, recipe }); // Pass the recipe data to the EJS file
+  res.render('recipe-info', { user: req.session.user, recipe });
 });
 
 

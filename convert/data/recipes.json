@@ -24,11 +24,217 @@
   },
   {
     "id": "2",
-    "title": "Another Recipe",
-    "image": "/images/recipe/another.jpg",
+    "title": "Vegan Oat Cookies",
+    "image": "/images/recipe/vegan.jpg",
+    "kcal": 180,
+    "sugar": 8,
+    "ingredients": [
+      "100 gram tepung gandum",
+      "100 gram oat",
+      "60 ml minyak zaitun",
+      "30 gram gula kelapa",
+      "1 sendok teh vanila"
+    ],
+    "steps": [
+      "Panaskan oven hingga 180°C.",
+      "Campur minyak zaitun, gula kelapa, dan vanila hingga merata.",
+      "Tambahkan tepung gandum dan oat, aduk hingga adonan tercampur.",
+      "Bentuk adonan menjadi bola-bola kecil dan pipihkan di atas loyang.",
+      "Panggang selama 12-15 menit hingga cookies matang."
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Peanut Butter Cookies",
+    "image": "/images/recipe/peanut.jpg",
+    "kcal": 200,
+    "sugar": 12,
+    "ingredients": [
+      "150 gram selai kacang",
+      "100 gram gula pasir",
+      "1 butir telur",
+      "1/2 sendok teh baking powder",
+      "Sejumput garam"
+    ],
+    "steps": [
+      "Panaskan oven hingga 175°C.",
+      "Campurkan selai kacang, gula, telur, baking powder, dan garam dalam satu wadah.",
+      "Bentuk adonan menjadi bola-bola kecil dan pipihkan dengan garpu.",
+      "Panggang selama 10-12 menit hingga matang.",
+      "Dinginkan sebelum disajikan."
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Choco Almond Bars",
+    "image": "/images/recipe/almond.webp",
+    "kcal": 230,
+    "sugar": 15,
+    "ingredients": [
+      "100 gram tepung almond",
+      "80 gram choco chips",
+      "50 gram madu",
+      "1 butir telur",
+      "Sejumput garam"
+    ],
+    "steps": [
+      "Panaskan oven hingga 175°C.",
+      "Campurkan tepung almond, choco chips, madu, telur, dan garam.",
+      "Tuang adonan ke dalam loyang dan ratakan.",
+      "Panggang selama 20 menit hingga bagian atasnya mengeras.",
+      "Biarkan dingin sebelum dipotong menjadi bar."
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Lemon Coconut Cookies",
+    "image": "/images/recipe/lemon.webp",
+    "kcal": 150,
+    "sugar": 7,
+    "ingredients": [
+      "100 gram tepung kelapa",
+      "50 ml minyak kelapa",
+      "30 gram gula pasir",
+      "1 butir telur",
+      "1 sendok teh kulit lemon parut"
+    ],
+    "steps": [
+      "Panaskan oven hingga 180°C.",
+      "Campurkan semua bahan dalam satu wadah hingga adonan terbentuk.",
+      "Bentuk adonan menjadi bola-bola kecil dan pipihkan.",
+      "Panggang selama 10-12 menit hingga bagian pinggirnya berwarna kecoklatan.",
+      "Dinginkan sebelum disajikan."
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Avocado Smoothie Bowl",
+    "image": "/images/recipe/green.jpg",
+    "kcal": 250,
+    "sugar": 12,
+    "ingredients": [
+      "1 buah alpukat matang",
+      "150 ml susu almond",
+      "1 sendok makan madu",
+      "50 gram granola",
+      "Buah beri segar untuk topping"
+    ],
+    "steps": [
+      "Blender alpukat, susu almond, dan madu hingga halus.",
+      "Tuang ke dalam mangkuk.",
+      "Tambahkan granola dan beri sebagai topping.",
+      "Sajikan dingin."
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Quinoa Salad",
+    "image": "/images/recipe/salad.webp",
+    "kcal": 320,
+    "sugar": 4,
+    "ingredients": [
+      "100 gram quinoa, dimasak",
+      "1 buah paprika merah, dipanggang",
+      "1 buah zucchini, dipanggang",
+      "50 gram keju feta",
+      "2 sendok makan minyak zaitun",
+      "1 sendok makan air lemon"
+    ],
+    "steps": [
+      "Campurkan quinoa dengan paprika dan zucchini panggang.",
+      "Tambahkan keju feta, minyak zaitun, dan air lemon.",
+      "Aduk rata dan sajikan."
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Mango Chia Pudding",
+    "image": "/images/recipe/mango.jpeg",
     "kcal": 200,
     "sugar": 15,
-    "ingredients": ["Ingredient 1", "Ingredient 2"],
-    "steps": ["Step 1", "Step 2"]
+    "ingredients": [
+      "200 ml santan",
+      "2 sendok makan chia seeds",
+      "1 buah mangga, dipotong dadu",
+      "1 sendok makan madu"
+    ],
+    "steps": [
+      "Campurkan santan, chia seeds, dan madu dalam wadah.",
+      "Dinginkan selama 4 jam atau semalaman.",
+      "Tambahkan potongan mangga sebelum disajikan."
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Vegetable Stir Fry",
+    "image": "/images/recipe/vege.jpg",
+    "kcal": 180,
+    "sugar": 5,
+    "ingredients": [
+      "1 buah wortel, diiris tipis",
+      "1 buah paprika hijau, dipotong-potong",
+      "100 gram brokoli",
+      "2 sendok makan saus tiram",
+      "1 sendok makan minyak wijen"
+    ],
+    "steps": [
+      "Panaskan minyak wijen di wajan.",
+      "Tambahkan wortel, paprika, dan brokoli, tumis hingga layu.",
+      "Tambahkan saus tiram dan aduk rata, masak hingga matang."
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Berry Yogurt Parfait",
+    "image": "/images/recipe/berry.jpg",
+    "kcal": 180,
+    "sugar": 12,
+    "ingredients": [
+      "200 gram yogurt plain",
+      "50 gram stroberi segar, diiris",
+      "50 gram blueberry",
+      "30 gram granola"
+    ],
+    "steps": [
+      "Susun lapisan yogurt, granola, dan buah beri dalam gelas.",
+      "Ulangi lapisan sesuai keinginan.",
+      "Sajikan dingin."
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Baked Sweet Potatoes",
+    "image": "/images/recipe/baked.webp",
+    "kcal": 160,
+    "sugar": 8,
+    "ingredients": [
+      "2 buah ubi jalar, dibelah dua",
+      "1 sendok makan minyak zaitun",
+      "Sejumput garam",
+      "Sejumput lada hitam"
+    ],
+    "steps": [
+      "Panaskan oven hingga 200°C.",
+      "Oleskan minyak zaitun pada ubi jalar, tambahkan garam dan lada.",
+      "Panggang selama 30-40 menit hingga empuk."
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Banana Oat Pancakes",
+    "image": "/images/recipe/banana.jpg",
+    "kcal": 220,
+    "sugar": 10,
+    "ingredients": [
+      "1 buah pisang matang",
+      "50 gram oats",
+      "1 butir telur",
+      "Sejumput kayu manis"
+    ],
+    "steps": [
+      "Haluskan pisang dan campurkan dengan oats, telur, dan kayu manis.",
+      "Panaskan wajan dan masak adonan dalam porsi kecil.",
+      "Balik pancake setelah satu sisi matang, masak hingga kedua sisi kecoklatan."
+    ]
   }
 ]
