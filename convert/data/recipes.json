@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1",
+    "title": "Choco Chip Cookies",
+    "image": "/images/recipe/cookie.jpg",
+    "kcal": 141,
+    "sugar": 10,
+    "ingredients": [
+      "150 gram tepung almond",
+      "50 gram oat yang sudah dihaluskan",
+      "60 ml minyak kelapa",
+      "50 gram madu",
+      "1 butir telur"
+    ],
+    "steps": [
+      "Panaskan oven hingga suhu 175°C.",
+      "Campurkan bahan basah...",
+      "Tambahkan bahan kering...",
+      "Bentuk cookies dan panggang..."
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Another Recipe",
+    "image": "/images/recipe/another.jpg",
+    "kcal": 200,
+    "sugar": 15,
+    "ingredients": ["Ingredient 1", "Ingredient 2"],
+    "steps": ["Step 1", "Step 2"]
+  }
+]

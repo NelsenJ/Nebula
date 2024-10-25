@@ -162,13 +162,13 @@
 
 
   .container .girl{
-    background-image: url(../images/sign/Screenshot\ 2024-08-25\ 193745.png);
+    background-image: url(../images/sign/girl.png);
     background-size: 125% 125%;
     background-position: center;
   }
 
   .container .man {
-    background-image: url(../images/sign/Screenshot\ 2024-08-25\ 193537.png);
+    background-image: url(../images/sign/boy.png);
     background-size: 150% 150%;
     background-position: center;
   }
@@ -460,13 +460,13 @@
   }
 
   .container .girl {
-    background-image: url(../images/sign/Screenshot\ 2024-08-25\ 193745.png);
+    background-image: url(../images/sign/girl.png);
     background-size: 125% 125%;
     background-position: center;
   }
 
   .container .man {
-    background-image: url(../images/sign/Screenshot\ 2024-08-25\ 193537.png);
+    background-image: url(../images/sign/boy.png);
     background-size: 150% 150%;
     background-position: center;
   }

@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputs = document.querySelectorAll('input');
     const avatar = document.getElementById('avatar');
     const fileInput = document.getElementById('file-input');
+    const popup = document.getElementById('popup');
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const dateInput = document.getElementById('birthDate')
 
     const setDefaultAvatar = (gender) => {
         if (gender === 'male') {
@@ -91,4 +95,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.querySelector('.save').style.display = 'none';
     });
+
+    const deleteBtn = document.querySelector('.delete button');
+    deleteBtn.addEventListener('click', function() {
+        popup.classList.remove('hidden');
+    });
+
+    noBtn.addEventListener('click', function() {
+        popup.classList.add('hidden');
+    });
+    yesBtn.addEventListener('click', function() {
+        localStorage.removeItem('name');
+        localStorage.removeItem('gender');
+        localStorage.removeItem('height');
+        localStorage.removeItem('weight');
+        document.getElementById('User').value = '';
+        document.querySelectorAll('input[name="gender"]').forEach(input => input.checked = false);
+        document.getElementById('height').value = '';
+        document.getElementById('weight').value = '';
+        alert("Akun berhasil dihapus!");
+        window.location.href = '/';
+    });
+
 });

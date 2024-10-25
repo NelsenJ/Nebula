@@ -19,176 +19,30 @@
   </div>
 
   <div class="container">
-
-    <div class="card">
-      <img src="/images/recipe/cookie.jpg">
-      <h3>Choco Chip Cookies</h3>
-
-      <div class="bottom">
-        <div class="info">
-          <div class="kcal">
-            <img src="/images/recipe/kcal.jpg" alt="">
-            <p>141 kcal</p>
-          </div>
-          <div class="gula">
-            <img src="/images/recipe/sugar.jpg" alt="">
-            <p>10 g</p>
-          </div>
-        </div>
-        <div class="view">
-          <a href="/recipe-info">Lihat Resep</a >
-        </div>
-      </div>
-  </div>
-
-  <div class="card">
-    <img src="/images/recipe/cookie.jpg">
-    <h3>Choco Chip Cookies</h3>
-
-    <div class="bottom">
-      <div class="info">
-        <div class="kcal">
-          <img src="/images/recipe/kcal.jpg" alt="">
-          <p>141 kcal</p>
-        </div>
-        <div class="gula">
-          <img src="/images/recipe/sugar.jpg" alt="">
-          <p>10 g</p>
-        </div>
-      </div>
-      <div class="view">
-        <a href="/recipe-info">Lihat Resep</a >
-      </div>
-    </div>
-
-</div>
-
-<div class="card">
-  <img src="/images/recipe/cookie.jpg">
-  <h3>Choco Chip Cookies</h3>
-
-  <div class="bottom">
-    <div class="info">
-      <div class="kcal">
-        <img src="/images/recipe/kcal.jpg" alt="">
-        <p>141 kcal</p>
-      </div>
-      <div class="gula">
-        <img src="/images/recipe/sugar.jpg" alt="">
-        <p>10 g</p>
-      </div>
-    </div>
-    <div class="view">
-      <a href="/recipe-info">Lihat Resep</a >
-    </div>
-  </div>
-
-</div>
-
-<div class="card">
-  <img src="/images/recipe/cookie.jpg">
-  <h3>Choco Chip Cookies</h3>
-
-  <div class="bottom">
-    <div class="info">
-      <div class="kcal">
-        <img src="/images/recipe/kcal.jpg" alt="">
-        <p>141 kcal</p>
-      </div>
-      <div class="gula">
-        <img src="/images/recipe/sugar.jpg" alt="">
-        <p>10 g</p>
-      </div>
-    </div>
-    <div class="view">
-      <a href="/recipe-info">Lihat Resep</a >
-    </div>
-  </div>
-  </div>
-
-  <div class="card">
-    <img src="/images/recipe/cookie.jpg">
-    <h3>Choco Chip Cookies</h3>
-  
-    <div class="bottom">
-      <div class="info">
-        <div class="kcal">
-          <img src="/images/recipe/kcal.jpg" alt="">
-          <p>141 kcal</p>
-        </div>
-        <div class="gula">
-          <img src="/images/recipe/sugar.jpg" alt="">
-          <p>10 g</p>
-        </div>
-      </div>
-      <div class="view">
-        <a href="/recipe-info">Lihat Resep</a >
-      </div>
-    </div>
-    </div>
-
-    <div class="card">
-      <img src="/images/recipe/cookie.jpg">
-      <h3>Choco Chip Cookies</h3>
+    <% recipes.forEach(recipe => { %>
+      <div class="card">
+        <img src="<%= recipe.image %>">
+        <h3><%= recipe.title %></h3>
     
-      <div class="bottom">
-        <div class="info">
-          <div class="kcal">
-            <img src="/images/recipe/kcal.jpg" alt="">
-            <p>141 kcal</p>
+        <div class="bottom">
+          <div class="info">
+            <div class="kcal">
+              <img src="/images/recipe/kcal.jpg" alt="">
+              <p><%= recipe.kcal %> kcal</p>
+            </div>
+            <div class="gula">
+              <img src="/images/recipe/sugar.jpg" alt="">
+              <p><%= recipe.sugar %> g</p>
+            </div>
           </div>
-          <div class="gula">
-            <img src="/images/recipe/sugar.jpg" alt="">
-            <p>10 g</p>
+          <div class="view">
+            <a href="/recipe-info/<%= recipe.id %>">Lihat Resep</a>
           </div>
-        </div>
-        <div class="view">
-          <a href="/recipe-info">Lihat Resep</a >
         </div>
       </div>
-    </div>
-
-    <div class="card">
-      <img src="/images/recipe/cookie.jpg">
-      <h3>Choco Chip Cookies</h3>
+    <% }); %>
     
-      <div class="bottom">
-        <div class="info">
-          <div class="kcal">
-            <img src="/images/recipe/kcal.jpg" alt="">
-            <p>141 kcal</p>
-          </div>
-          <div class="gula">
-            <img src="/images/recipe/sugar.jpg" alt="">
-            <p>10 g</p>
-          </div>
-        </div>
-        <div class="view">
-          <a href="/recipe-info">Lihat Resep</a >
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/images/recipe/cookie.jpg">
-      <h3>Choco Chip Cookies</h3>
-    
-      <div class="bottom">
-        <div class="info">
-          <div class="kcal">
-            <img src="/images/recipe/kcal.jpg" alt="">
-            <p>141 kcal</p>
-          </div>
-          <div class="gula">
-            <img src="/images/recipe/sugar.jpg" alt="">
-            <p>10 g</p>
-          </div>
-        </div>
-        <div class="view">
-          <a href="/recipe-info">Lihat Resep</a >
-        </div>
-      </div>
-    </div>
+  </div>
 
   <script src="/js/nav.js"></script>
 </body>
