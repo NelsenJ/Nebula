@@ -14,7 +14,7 @@ section.page {
   min-height: 100vh;
   padding: 20px 0px;
   /* background-color: salmon; */
-  transform: translateY(100px);
+  transform: translateY(200px);
 }
 
 header {

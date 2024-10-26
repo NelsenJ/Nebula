@@ -15,7 +15,7 @@
   <body>
     <header>
       <div class="logo">
-        <div class="profile"></div>
+        <div class="profile" id="avatar" ></div>
         <div class="desc">
           <div class="top">Selamat Datang Kembali!</div>
           <div class="bottom" id="name"><%= user ? user.name : 'Contoh Nama' %></div>
@@ -43,10 +43,6 @@
       <a href="/recipes"><i class="fa-solid fa-utensils"></i>Resep Makanan Sehat</a>
       <h2>Pengaturan</h2>
       <a href="/profile"><i class="fa-solid fa-gear"></i>Pengaturan Profil</a>
-      <a href="#" class="darkmodeContain">
-        <i class="bx bx-moon"></i>
-        <p>Darkmode</p>
-      </a>
     </nav>
 
   </body>

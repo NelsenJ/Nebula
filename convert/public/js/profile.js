@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('input[name="gender"]').forEach(input => input.checked = false);
         document.getElementById('height').value = '';
         document.getElementById('weight').value = '';
+        localStorage.clear();
         alert("Akun berhasil dihapus!");
         window.location.href = '/';
     });
