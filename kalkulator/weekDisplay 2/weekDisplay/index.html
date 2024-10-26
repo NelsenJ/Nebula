@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week Navigator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="page">
+      <header></header>
+      <h1 style="text-align: center">Konsumsi Gula Harian</h1>
+
+      <div class="calendar-container">
+        <div class="calendar">
+          <div class="header" style="padding: 0px 20px">
+            <button id="prev">◀</button>
+            <div id="monthYear"></div>
+            <button id="next">▶</button>
+          </div>
+          <div class="days" id="dayName"></div>
+          <div class="days" id="days"></div>
+          <small style="margin-top: 20px; padding: 0px 20px">Keterangan</small>
+          <div class="box-container detail-calendar" style="padding: 0px 20px">
+            <div class="left">
+              <div><span class="box normal"></span><small>Normal</small></div>
+              <div><span class="box sedang"></span><small>Sedang</small></div>
+              <div><span class="box tinggi"></span><small>Tinggi</small></div>
+              <div><span class="box kosong"></span><small>Tidak diisi</small></div>
+            </div>
+            <div class="right">
+              <span class="calendar-icon" style="font-size: 24px; cursor: pointer" id="toggleView">📆</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-page" >
+        <h2 style="text-align: center">Kamu makan apa aja hari ini ?</h2>
+        <button id="addFood">Tambah</button>
+      </div>
+
+      <div class="today-foods" style="padding: 0px 40px; margin: 30px 0px">
+        <h2 style="text-align: center">List makanan hari ini :</h2>
+        <ul class="food-list"></ul>
+      </div>
+    </section>
+
+    <div id="foodModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Tambah Makanan</h2>
+        <form id="foodForm">
+          <input type="text" id="foodName" name="foodName" required placeholder="Cari makanan" />
+          <button type="submit">Cari</button>
+        </form>
+      </div>
+    </div>
+    <script id="days-template" type="text/x-handlebars-template">
+      {{#each days}}
+        <div>{{this}}</div>
+      {{/each}}
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
