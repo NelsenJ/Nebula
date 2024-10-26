@@ -45,6 +45,10 @@ router.get('/recipe-info/:id', (req, res) => {
 });
 
 
+router.get('/calc-info', (req, res) => {
+  res.render('calc-info', { user: req.session.user, recipes });
+});
+
 router.get('/calc', (req, res) => {
   res.render('calc', { user: req.session.user });
 });

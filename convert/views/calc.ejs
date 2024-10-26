@@ -10,78 +10,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 </head>
 <body>
     <%- include('partials/nav') %>
     <section class="page">
-        <h1 style="text-align: center;">Konsumsi Gula Harian</h1>
-
-        <div class="calendar-container" style="margin-top: 10px;">
-            <div class="month-container">
-                <button id="prevWeek">◀</button>
-                <div id="monthDisplay" style="font-size: 20px; font-weight: bold;"></div>
-                <button id="nextWeek">▶</button>
+        <h1 style="text-align: center">Konsumsi Gula Harian</h1>
+  
+        <div class="calendar-container">
+          <div class="calendar">
+            <div class="header" style="padding: 0px 20px">
+              <button id="prev">◀</button>
+              <div id="monthYear"></div>
+              <button id="next">▶</button>
             </div>
-            <div class="week-container">
-                <div class="week-display">
-                    <div class="day name">Minggu</div>
-                    <div class="day name">Senin</div>
-                    <div class="day name">Selasa</div>
-                    <div class="day name">Rabu</div>
-                    <div class="day name">Kamis</div>
-                    <div class="day name">Jumat</div>
-                    <div class="day name">Sabtu</div>
-                </div>
+            <div class="days" id="dayName"></div>
+            <div class="days" id="days"></div>
+            <small style="margin-top: 20px; padding: 0px 20px">Keterangan</small>
+            <div class="box-container detail-calendar" style="padding: 0px 20px">
+              <div class="left">
+                <div><span class="box normal"></span><small>Normal</small></div>
+                <div><span class="box sedang"></span><small>Sedang</small></div>
+                <div><span class="box tinggi"></span><small>Tinggi</small></div>
+                <div><span class="box kosong"></span><small>Tidak diisi</small></div>
+              </div>
+              <div class="right">
+                <span class="calendar-icon" style="font-size: 24px; cursor: pointer" id="toggleView">📆</span>
+              </div>
             </div>
-            <div class="week-container">  
-                <div id="weekDisplay"></div>
-            </div>
-            <small style="margin-top: 20px; padding: 0px 40px;">Keterangan</small>
-            <div class="box-container detail-calendar" style="padding: 0px 40px;">
-                <div class="left">
-                    <div>
-                        <span class="box normal"></span><small>Normal</small>
-                    </div>
-                    <div>
-                        <span class="box sedang"></span><small>Sedang</small>
-                    </div>
-                    <div>
-                        <span class="box tinggi"></span><small>Tinggi</small>
-                    </div>
-                    <div>
-                        <span class="box normal"></span><small>Tidak diisi</small>
-                    </div>
-                </div>
-                <div class="right">
-                    <span class="calendar-icon" style="font-size: 24px; cursor: pointer;" id="calendarSwitch">📆</span>
-                </div>
-            </div>
+          </div>
         </div>
+  
+        <div class="action-page" >
+          <h2 style="text-align: center">Kamu makan apa aja hari ini ?</h2>
+          <a href="/calc-info" style="width: 100%;     display: flex;
+          align-items: center;
+          justify-content: center;"><button id="addFood">Tambah</button></a>
+        </div>
+  
+        <div class="today-foods" style="padding: 10px 40px; margin: 30px 0px">
+          <h2 style="text-align: center">List makanan hari ini :</h2>
+          <ul class="food-list"></ul>
+        </div>
+      </section>
+  
 
-        <div class="action-page" style="display: flex; flex-grow: 1; flex-direction: column; padding: 10px 40px; margin: 30px 0px;">
-            <h2 style="text-align: center;">Kamu makan apa aja hari ini ?</h2>
-            <button id="addFood">Tambah</button>
-        </div>
-
-        <div class="today-foods" style="padding: 10px 40px; margin: 30px 0px;">
-            <h2 style="text-align: center;">List makanan hari ini : </h2>
-            <ul class="food-list">
-               
-            </ul>
-        </div>
-    </section>
-
-    <div id="foodModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Tambah Makanan</h2>
-            <form id="foodForm">
-                <input type="text" id="foodName" name="foodName" required placeholder="Cari makanan">
-                <button type="submit">Cari</button>
-            </form>
-        </div>
-    </div>
-    
-    <script src="/js/calc.js"></script>
+      <script id="days-template" type="text/x-handlebars-template">
+        {{#each days}}
+          <div>{{this}}</div>
+        {{/each}}
+      </script>
+      <script src="js/calc.js"></script>
 </body>
 </html>
