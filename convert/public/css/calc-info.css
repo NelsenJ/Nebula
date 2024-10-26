@@ -4,6 +4,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root{
+  --primary-color: #FCFFFF;
+  --button: #F9CA9E;
+  --button-arrowc: #fff;
+  --input: #FF9BB1;
+  --label: #78D1CC;
+  --font: #fff;
+  --delete: #ED451D;
+  --delete-hover: #ed461d8f;
+  --changename: #919191;
+  --input-checkbox: #FFC8DD;
+  --border: #000;
+  --checked:#78D1CC;
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -191,4 +208,31 @@ div.container {
   .card .gula {
     margin-right: 50px;
   }
+}
+
+
+div.button{
+  position: absolute;
+  left: 30px;
+}
+
+div.button button{
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--button);
+  padding: 10px;
+  color: var(--button-arrowc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.arrow-left {
+  background-image: url(/images/calc/arrow.png);
+  width: 25px;
+  height: 25px;
+  background-size: 100% 100%;
+  background-position-x: -1px;
 }

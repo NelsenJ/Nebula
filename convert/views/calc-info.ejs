@@ -9,7 +9,13 @@
 <body>
     <%- include("partials/nav") %>
     <%- include("partials/dummy") %>
+
+
     <div class="concontainer" >
+
+        <div class="button back">
+            <a href="/calc"><button><span class="arrow-left"></span></button></a>
+        </div>
         <div class="search">
             <input type="text" placeholder="Cari Resep Makanan dan Minuman..." />
             <div class="search-logo">
@@ -32,11 +38,12 @@
                             <div class="atas"><p>Gula</p></div>
                             <div class="bawah"><p><%= recipe.sugar %> g</p></div>
                         </div>
-                        <div class="add"><p>+</p></div>
+                        <a href="/calc"><div class="add"><p>+</p></div></a>
                     </div>
                 </div>
             <% }) %>
         </div>
     </div>
 </body>
+<script src="js/calc-info.js"></script>
 </html>
