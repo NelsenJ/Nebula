@@ -10,12 +10,47 @@ body {
 
 section.page {
   margin-top: 200px;
-  max-width: 500px;
+  /* max-width: 500px; */
   min-height: 100vh;
   padding: 20px 0px;
+  /* margin-bottom: 20px; */
   /* background-color: salmon; */
-  transform: translateY(200px);
+  transform: translateY(15%);
 }
+
+section.page h1 {
+  margin-bottom: 20px;
+}
+
+.page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+/* .calendar-container akan menempati bagian kiri layar */
+.calendar-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+/* Elemen .action-page dan .today-foods akan menempati bagian kanan layar */
+.action-page, 
+.today-foods {
+  flex: 1;
+  /* max-width: 50%; */
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px */
+}
+
+
+
+
 
 header {
   height: 80px;
@@ -86,7 +121,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px 40px;
+  /* padding: 0px 40px; */
 }
 
 .month-container {
@@ -136,14 +171,17 @@ header {
 }
 
 .action-page {
+  width: 120%;
   display: flex;
   /* flex-grow: 1; */
   flex-direction: column;
-  margin: 30px 0;
+  /* margin: 30px 0; */
   background-color: #b4dadb;
+  padding-top: 10px;
   padding-bottom: 15px;
   border-radius: 20px;
   align-items: center;
+  height: 40%;
 }
 
 .action-page h2 {
@@ -167,7 +205,7 @@ header {
 
 .today-foods {
   background-color: #a0bee1;
-  height: fit-content;
+  height: 1000px;
   border-radius: 20px;
   padding: 0 40px;
   margin: 30px 0;
@@ -175,13 +213,14 @@ header {
   flex-direction: column;
   align-items: center;
   padding-bottom: 10px;
+  width: 120%;
 }
 .today-foods h2 {
   font-size: 23px;
   text-transform: capitalize;
 }
 .food-list {
-  height: 200px;
+  height: 330px;
   width: 100%;
   background-color: #fcead2;
   border-radius: 20px;
@@ -229,4 +268,92 @@ header {
 .month-view .week-display {
   width: auto;
   flex-wrap: wrap;
+}
+
+ul.food-list{
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc; 
+  justify-content: space-between;
+  padding: 10px;
+}
+
+ul.food-list li{
+  margin-left: 20px;
+}
+
+ul.food-list li div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+ul.food-list::-webkit-scrollbar {
+  width: 15px;
+}
+
+ul.food-list::-webkit-scrollbar-track {
+  background-color: #ce8985;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-block: 1.5em;
+}
+
+ul.food-list::-webkit-scrollbar-thumb {
+  background: #ff9bb1;
+  border-radius: 10px;
+  border: 0.1em solid #dc7070;
+}
+
+li.total-sugar{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ff2149;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+div.food-items li{
+  margin-left: 20px;
+}
+
+div.food-items li div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .page {
+      flex-direction: column;
+
+  }
+
+  .right-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calendar-container, 
+  .right-container {
+      max-width: 100%;
+  }
+  .calendar{
+    margin-bottom: 20px;
+  }
+
+  .today-foods{
+    width: 100%;
+  }
+
+  .action-page{
+    width: 100%;
+  }
+
 }
